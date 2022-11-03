@@ -43,7 +43,7 @@ FILSVOX merupakan aplikasi review film berbasis Web App yang dibuat dengan mengg
 
 ### 🔍 Apa apakah yang baru?
 
-- Lihat perubahan [lebih lanjut.](../development/changelogs.md)
+- Lihat perubahan [lebih lanjut.](../main/changelogs.md)
 
 ### Informasi Akun
 
