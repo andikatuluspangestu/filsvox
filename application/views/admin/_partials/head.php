@@ -11,14 +11,17 @@
   <link rel="canonical" href="<?= base_url(); ?>" />
 
   <!-- General Main CSS -->
-  <link rel="stylesheet" href="<?= base_url('assets/dashboard/css/style.css') ?>" />
+  <link href="<?= base_url('assets/dashboard/css/style.css') ?>" rel="stylesheet">
 
   <!-- Flowbit CSS Framework -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- All Vendor CSS -->
-  <link rel="stylesheet" href="sweetalert2.min.css">
+  <link href="sweetalert2.min.css" rel="stylesheet">
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link href="https://cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />

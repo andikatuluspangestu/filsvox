@@ -19,7 +19,14 @@
         <div class="max-w-lg mx-auto rounded-xl shadow-md overflow-hidden md:max-w-3xl mt-20 mb-5 bg-slate-800">
           <div class="md:flex">
             <div class="md:flex-shrink-0">
-              <img class="h-full lg:h-56 w-full object-cover md:w-56" src="<?= $article->cover; ?>" alt="Ricky & Morty poster">
+
+              <!-- Jika tidak ada video maka tampilkan gambar -->
+              <?php if ($article->trailer == null) { ?>
+                <img class="h-48 w-full object-cover md:h-full md:w-48" src="<?php echo $article->cover ?>" alt="">
+              <?php } else { ?>
+                <iframe class="h-48 w-full object-cover md:h-full md:w-48" src="<?php echo $article->trailer ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <?php } ?>
+
             </div>
             <div class="p-8">
               <h1 class="uppercase tracking-wide text-gray-300 dark:text-gray-300 font-semibold">
@@ -68,8 +75,8 @@
 
         <!-- Alur Cerita Film -->
         <h2 class="border-l-4 border-slate-400 text-2xl text-gray-400 pl-2 mt-8">Alur Cerita</h2>
-        <p class="mb-3 font-light text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-100 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left mt-5 text-justify">
-          <?= $article->content ?>
+        <p class="mb-3 text-gray-100 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-100 first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left pb-5 pt-3">
+        <?= htmlentities($article->content) ?>
         </p>
 
       </section>
@@ -114,8 +121,8 @@
 
       <!-- Tambah Ulasan -->
       <section id="tambah-ulasan">
-        <h2 class="border-l-4 border-slate-400 text-2xl text-gray-400 pl-2 mt-4">Ulasan Pengguna</h2>
-        <div id="disqus_thread">
+        <h2 class="border-l-4 border-slate-400 text-2xl text-gray-400 pl-2 mt-5">Ulasan Pengguna</h2>
+        <div class="m-3" id="disqus_thread">
         </div>
       </section>
 

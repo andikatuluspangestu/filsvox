@@ -49,10 +49,19 @@
 
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-cover">
+                  Video Trailer ( Opsional )
+                </label>
+                <input name="trailer" class="form-input block w-full mt-1" id="grid-cover" type="text" placeholder="Masukan link video trailer film" title="Tautan video jika ada">
+              </div>
+            </div>
+
+            <div class="-mx-3 mb-6">
+              <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-content">
                   Sinopsis
                 </label>
-                <textarea name="content" class="form-input block w-full mt-1" id="grid-content" type="text" required title="Sinopsis Wajib di isi"></textarea>
+                <textarea name="content" class="form-input block w-full" id="editor" type="text" required title="Sinopsis Wajib di isi"></textarea>
               </div>
             </div>
 
