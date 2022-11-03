@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
 - Added : Now you can add trailer video, if trailer video is not available, you can add only cover image
 - Added : Now you can added detail information ( directors, writers and film actors )
 - Change : Merge to Quill.JS for better text editor
+- Change : Improve navbar background color in Dashboard
+- Change : Improve action buttons in article list
 - Fixed : The search result layout display has been fixed
 - Fixed : All minor bugs
 - Issue : For trailers only supports direct video links, does not support videos from youtube (due to copyright issues)
