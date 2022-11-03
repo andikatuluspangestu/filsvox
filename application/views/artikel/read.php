@@ -38,22 +38,22 @@
                     <tr>
                       <td>Directors</td>
                       <td> &nbsp; : &nbsp; </td>
-                      <td>Kim Hui-won</td>
+                      <td><?= $article->directors ?></td>
                     </tr>
                     <tr>
                       <td>Writers</td>
                       <td> &nbsp; : &nbsp; </td>
-                      <td>Jae-Beom Park</td>
+                      <td><?= $article->writers ?></td>
                     </tr>
                     <tr>
                       <td>Actors</td>
                       <td> &nbsp; : &nbsp; </td>
-                      <td>Song Joong-Ki, Jeon Yeo-bin, Taecyeon</td>
+                      <td><?= $article->actors ?></td>
                     </tr>
                     <tr>
                       <td>Rilis</td>
                       <td> &nbsp; : &nbsp; </td>
-                      <td>-</td>
+                      <td><?= $article->release_date ?></td>
                     </tr>
                     <!-- <tr>
                       <td>Publish</td>
@@ -76,7 +76,7 @@
         <!-- Alur Cerita Film -->
         <h2 class="border-l-4 border-slate-400 text-2xl text-gray-400 pl-2 mt-8">Alur Cerita</h2>
         <p class="mb-3 text-gray-100 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-100 first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left pb-5 pt-3">
-        <?= htmlentities($article->content) ?>
+          <?= htmlentities($article->content) ?>
         </p>
 
       </section>

@@ -52,7 +52,13 @@ class Post extends CI_Controller
         'slug' => $slug,
         'content' => $this->input->post('content'),
         'headline' => $this->input->post('headline'),
-        'draft' => $this->input->post('draft')
+        'draft' => $this->input->post('draft'),
+
+        // Input Detail Film
+        'directors' => $this->input->post('directors'),
+        'writers' => $this->input->post('writers'),
+        'actors' => $this->input->post('actors'),
+        'release_date' => $this->input->post('release_date'),
       ];
 
       $saved = $this->article_model->insert($article);
@@ -95,7 +101,13 @@ class Post extends CI_Controller
         'kategori' => $this->input->post('kategori'),
         'content' => $this->input->post('content'),
         'headline' => $this->input->post('headline'),
-        'draft' => $this->input->post('draft')
+        'draft' => $this->input->post('draft'),
+
+        // Input Detail Film
+        'directors' => $this->input->post('directors'),
+        'writers' => $this->input->post('writers'),
+        'actors' => $this->input->post('actors'),
+        'release_date' => $this->input->post('release_date'),
       ];
       $updated = $this->article_model->update($article);
       if ($updated) {

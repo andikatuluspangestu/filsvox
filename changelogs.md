@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 - Added : User Management
 - Added : Now you can search or view list film by category
 - Added : Now you can add trailer video, if trailer video is not available, you can add only cover image
+- Added : Now you can added detail information ( directors, writers and film actors )
 - Change : Merge to Quill.JS for better text editor
 - Fixed : The search result layout display has been fixed
 - Fixed : All minor bugs
