@@ -11,46 +11,36 @@
       padding: 1px !important;
       border: blue !important;
     }
+
+    .form-control {
+      margin-bottom: 40px !important;
+      color: white !important;
+    }
+    .search {
+      color: white !important;
+    }
   </style>
 </head>
 
-<body>
+<body class="bg-gray-900">
 
   <!-- Navbar -->
   <?php $this->load->view('admin/_partials/navbar.php') ?>
 
   <!-- Main Section -->
-  <main class="main flex overflow-hidden bg-white pt-16">
+  <main class="main flex overflow-hidden bg-gray-900">
 
     <!-- Sidebar -->
     <?php $this->load->view('admin/_partials/side_nav.php') ?>
 
     <!-- Article Section -->
-    <div id="main-content" class="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64 pb-5">
+    <div id="main-content" class="h-full w-full bg-gray-0 relative overflow-y-auto lg:ml-64 pb-5">
       <div>
 
         <!-- Top Bar Artikel -->
-        <div class="p-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5">
+        <div class="p-4 bg-gray-900 block sm:flex items-center justify-between border-gray-200 mt-5">
           <div class="mb-1 w-full">
 
-            <div class="sm:flex">
-              <div class="hidden sm:flex items-center sm:divide-x sm:divide-gray-100 mb-3 sm:mb-0">
-                <h1 class="text-xl sm:text-2xl font-semibold text-gray-900">Daftar Artikel</h1>
-              </div>
-              <div class="flex items-center space-x-2 sm:space-x-3 ml-auto mr-12">
-
-                <!-- Tombol Buat Artikel -->
-                <a href="<?= base_url('/admin/post/new') ?>">
-                  <button type="button" data-modal-toggle="add-user-modal" class="w-1/2 text-white bg-blue-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium inline-flex items-center justify-center rounded-lg text-sm px-5 py-2 text-center sm:w-auto">
-                    <svg class="-ml-1 mr-2 h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
-                    </svg>
-                    Tulis Artikel
-                  </button>
-                </a>
-
-              </div>
-            </div>
           </div>
         </div>
 
@@ -58,7 +48,7 @@
         <div class="flex flex-col">
           <div class="overflow-x-auto">
             <div class="align-middle inline-block min-w-full">
-              <div class="shadow overflow-hidden">
+              <div class="shadow overflow-hidden text-gray-100">
                 <?php $this->load->view('admin/post_table.php') ?>
               </div>
             </div>
@@ -74,13 +64,13 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
 
   <script>
     // Create Datatable function without show entries
     $(document).ready(function() {
       $('#myTable').DataTable({
         "lengthChange": false,
-        "searching": true,
         "info": false,
         "paging": true,
         "ordering": true,
@@ -90,13 +80,38 @@
           "paginate": {
             "previous": "Sebelumnya",
             "next": "Selanjutnya"
-          }
+          },
+          "zeroRecords": "Data tidak ditemukan",
+          "info": "Menampilkan halaman _PAGE_ dari _PAGES_",
+          "infoEmpty": "Tidak ada data yang tersedia",
+          "searchPlaceholder": "  Cari Film",
+          "search": "",
         },
         "processing": true,
         "pagingType": "simple_numbers",
         "paginate_button": {
-          "class": "paginate_button"
+          "class": "paginate_button",
+          "active": "paginate_active",
+          "disabled": "paginate_disabled"
         },
+        dom: 'Bfrtip',
+        buttons: [{
+          text: 'Tulis Artikel',
+          action: function(e, dt, node, config) {
+            window.location.href = "<?= base_url('/admin/post/new') ?>";
+          },
+          className: 'btn btn-primary'
+        }],
+        searching : true,
+        searching : [
+          {
+            "smart": true,
+            className: 'form-control'
+          }
+        ],
+        "order": [
+          [0, "asc"]
+        ]
       });
     });
   </script>
@@ -139,8 +154,6 @@
       })
     </script>
   <?php endif ?>
-
-
 
 </body>
 

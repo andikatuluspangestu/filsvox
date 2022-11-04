@@ -10,36 +10,35 @@
 
   <?php $this->load->view('admin/_partials/navbar.php') ?>
 
-  <main class="main flex overflow-hidden bg-white pt-16">
+  <main class="main flex overflow-hidden bg-gray-900 pt-16">
 
     <?php $this->load->view('admin/_partials/side_nav.php') ?>
 
-    <div id="main-content" class="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
+    <div id="main-content" class="h-full w-full bg-gray-900 relative overflow-y-auto lg:ml-64">
       <main>
 
-        <div class="p-4 ml-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5">
-          <h1 class="text-2xl font-semibold text-gray-800">Tulis Artikel Film</h1>
+        <div class="p-4 ml-4 bg-gray-900 block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5">
+          <h1 class="text-2xl font-semibold text-gray-100">Tulis Artikel Film</h1>
           <div class="mt-4 sm:mt-0">
-            <a href="<?php echo site_url('admin/post') ?>" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+            <a href="<?php echo site_url('admin/post') ?>" class="bg-gray-800 hover:bg-gray-300 text-gray-300 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
               Kembali
             </a>
           </div>
         </div>
 
-        <div class="p-4 bg-white mt-4">
-
+        <div class="p-4 bg-gray-900">
           <div class="mb-4 border-gray-700">
             <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
               <li class="mr-2" role="presentation">
                 <a href="#" class="inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 group" id="profile-tab" data-tabs-target="#profile" role="tab" aria-controls="profile" aria-selected="false">
-                  <svg aria-hidden="true" class="mr-2 w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <svg aria-hidden="true" class="w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
                   </svg>General
                 </a>
               </li>
               <li class="mr-2" role="presentation">
-                <a href="#" class="inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 group" id="dashboard-tab" data-tabs-target="#dashboard" role="tab" aria-controls="dashboard" aria-selected="false">
-                  <svg aria-hidden="true" class="mr-2 w-5 h-5 text-gray-700 group-hover:text-gray-700 dark:text-gray-700 dark:group-hover:text-gray-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <a href="#" class="inline-flex p-4 text-gray-100 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 group" id="dashboard-tab" data-tabs-target="#dashboard" role="tab" aria-controls="dashboard" aria-selected="false">
+                  <svg aria-hidden="true" class="w-5 h-5 text-gray-100 group-hover:text-gray-700 dark:text-gray-700 dark:group-hover:text-gray-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
                     <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
                   </svg>Detail
@@ -49,43 +48,43 @@
           </div>
 
           <div id="myTabContent">
-            <div class="hidden p-4 bg-gray-50 rounded-lg bg-gray-100" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="hidden p-4 bg-gray-800 rounded-lg text-gray-100" id="profile" role="tabpanel" aria-labelledby="profile-tab">
               <div class="tabsku">
                 <form action="" method="post" enctype="multipart/form-data">
 
                   <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full px-3">
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-title">
+                      <label class="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2" for="grid-title">
                         Judul
                       </label>
-                      <input name="title" class="form-input block w-full mt-1" id="grid-title" type="text" placeholder="Title" required title="Judul Artikel Wajib di isi">
+                      <input name="title" class="bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 block w-full rounded" id="grid-title" type="text" placeholder="Title" required title="Judul Artikel Wajib di isi">
                     </div>
                   </div>
 
                   <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full px-3">
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-cover">
+                      <label class="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2" for="grid-cover">
                         Link Cover Film
                       </label>
-                      <input name="cover" class="form-input block w-full mt-1" id="grid-cover" type="text" placeholder="Masukan link atau cover film" required title="Cover Wajib di isi">
+                      <input name="cover" class="bg-gray-700 dark:border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 block w-full  rounded" id="grid-cover" type="text" placeholder="Masukan link atau cover film" required title="Cover Wajib di isi">
                     </div>
                   </div>
 
                   <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full px-3">
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-cover">
+                      <label class="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2" for="grid-cover">
                         Video Trailer ( Opsional )
                       </label>
-                      <input name="trailer" class="form-input block w-full mt-1" id="grid-cover" type="text" placeholder="Masukan link video trailer film" title="Tautan video jika ada">
+                      <input name="trailer" class="bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 block w-full rounded" id="grid-cover" type="text" placeholder="Masukan link video trailer film" title="Tautan video jika ada">
                     </div>
                   </div>
 
                   <div class="-mx-3 mb-6">
                     <div class="w-full px-3">
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-content">
+                      <label class="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2" for="grid-content">
                         Sinopsis
                       </label>
-                      <textarea name="content" class="form-input block w-full" id="editor" type="text" required title="Sinopsis Wajib di isi"></textarea>
+                      <textarea name="content" class="bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 block w-full" id="editor" type="text" required title="Sinopsis Wajib di isi"></textarea>
                     </div>
                   </div>
 
@@ -95,7 +94,7 @@
                         Kategori
                       </label>
                       <div class="relative">
-                        <select name="kategori" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline" id="grid-category">
+                        <select name="kategori" class="block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 rounded" id="grid-category">
                           <option value="">Pilih Kategori</option>
                           <?php foreach ($categories as $category) : ?>
                             <option value="<?php echo $category->id ?>"><?php echo $category->name ?></option>
@@ -116,7 +115,7 @@
                         Headline
                       </label>
                       <div class="relative">
-                        <select disabled name="headline" class="disable block appearance-none w-full bg-gray-100 border border-gray-300 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline" id="grid-headline">
+                        <select disabled name="headline" class="disable block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 rounded" id="grid-headline">
                           <option value="false">False</option>
                           <option value="true">True</option>
                         </select>
@@ -127,37 +126,37 @@
                   </div>
               </div>
             </div>
-            <div class="hidden p-4 bg-gray-50 rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+            <div class="hidden p-4 bg-gray-800 rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
               <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
-                  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-title">
+                  <label class="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2" for="grid-title">
                     Directors
                   </label>
-                  <input name="directors" class="form-input block w-full mt-1" id="grid-title" type="text" placeholder="Directors" required title="Judul Artikel Wajib di isi">
+                  <input name="directors" class="bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 block w-full rounded mt-1" id="grid-title" type="text" placeholder="Directors" required title="Judul Artikel Wajib di isi">
                 </div>
               </div>
               <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
-                  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-title">
+                  <label class="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2" for="grid-title">
                     Writers
                   </label>
-                  <input name="writers" class="form-input block w-full mt-1" id="grid-title" type="text" placeholder="Writers" required title="Judul Artikel Wajib di isi">
+                  <input name="writers" class="bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 block w-full rounded mt-1" id="grid-title" type="text" placeholder="Writers" required title="Judul Artikel Wajib di isi">
                 </div>
               </div>
               <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
-                  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-title">
+                  <label class="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2" for="grid-title">
                     Actors
                   </label>
-                  <input name="actors" class="form-input block w-full mt-1" id="grid-title" type="text" placeholder="Actors" required title="Judul Artikel Wajib di isi">
+                  <input name="actors" class="bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 block w-full rounded mt-1" id="grid-title" type="text" placeholder="Actors" required title="Judul Artikel Wajib di isi">
                 </div>
               </div>
               <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
-                  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-title">
+                  <label class="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2" for="grid-title">
                     Tahun Rilis
                   </label>
-                  <input name="release_date" class="form-input block w-full mt-1" id="grid-title" type="date" placeholder="Rilis" required title="Judul Artikel Wajib di isi">
+                  <input name="release_date" class="bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 block w-full rounded mt-1" id="grid-title" type="date" placeholder="Rilis" required title="Judul Artikel Wajib di isi">
                 </div>
               </div>
             </div>

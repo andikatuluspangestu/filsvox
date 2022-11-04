@@ -90,8 +90,9 @@
     const data = {
       labels: labels,
       datasets: [{
+
         label: "Artikel",
-        backgroundColor: "hsl(252, 82.9%, 67.8%)",
+        backgroundColor: "#A3C7D6",
         borderColor: "hsl(252, 82.9%, 67.8%)",
         color: "#fff",
 
@@ -114,10 +115,21 @@
 
     const configLineChart = {
       type: "bar",
-      data,
+      // Color Bar
       options: {
-        animation: true
+        animation: true,
+        plugins: {
+          legend: {
+            display: false,
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
       },
+      data,
     };
 
     var chartLine = new Chart(

@@ -22,7 +22,7 @@
 
               <!-- Jika tidak ada video maka tampilkan gambar -->
               <?php if ($article->trailer == null) { ?>
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="<?php echo $article->cover ?>" alt="">
+                <img class="w-full object-cover md:h-full md:w-48" src="<?php echo $article->cover ?>" alt="" style="height: 220px !important;">
               <?php } else { ?>
                 <iframe class="h-48 w-full object-cover md:h-full md:w-48" src="<?php echo $article->trailer ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <?php } ?>
