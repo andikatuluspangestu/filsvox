@@ -1,4 +1,4 @@
-<div class="navbar bg-slate-700 fixed top-0 left-0 right-0 z-50">
+<div class="navbar bg-slate-700 fixed top-0 left-0 right-0 z-50 pl-5">
   <div class="navbar-start">
     <a href="<?= base_url(); ?>">
       <label tabindex="0" class="btn btn-ghost btn-circle">
@@ -13,16 +13,10 @@
   <div class="navbar-end">
 
     <form action="<?= base_url('/search') ?>" method="get">
-      <div class="relative items-center content-center flex hidden md:block">
-        <input type="text" name="keyword" class="text-xs ring-1 bg-transparent ring-zinc-600 focus:ring-red-300 pl-5 pr-5 text-white py-3 rounded-full w-full outline-none focus:ring-3" placeholder="Search ...">
+      <div class="relative items-center content-center flex hidden md:block mr-5">
+        <input type="text" name="keyword" class="text-xs ring-1 bg-transparent ring-zinc-600 focus:ring-red-300 pl-5 pr-5 text-white py-3 rounded w-full outline-none focus:ring-3" placeholder="Cari Film ...">
       </div>
     </form>
-
-    <label tabindex="0" class="btn btn-ghost btn-circle avatar mx-5">
-      <div class="w-10 rounded-full">
-        <img src="https://img.zeit.de/kultur/film/2020-12/elliot-page-tranmann/wide__450x253__mobile__scale_1" />
-      </div>
-    </label>
 
   </div>
 </div>
