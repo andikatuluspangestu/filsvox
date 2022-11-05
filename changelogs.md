@@ -1,9 +1,11 @@
 ### **Changelogs**
 All notable changes to this project will be documented in this file.
 
-> [ v2.0.0 ] Unreleased - TBD :
+> [ v3.0.0 ] Unreleased - TBD :
 - Added : User Register or Sign Up
 - Added : User Management
+
+> [ v2.0.0 ] Released - 05/11/2022 :
 - Added : Now you can search or view list film by category
 - Added : Now you can add trailer video, if trailer video is not available, you can add only cover image
 - Added : Now you can added detail information ( directors, writers and film actors )
