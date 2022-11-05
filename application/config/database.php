@@ -75,10 +75,19 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'filsvox-ci',
+
+	// For Hosting - Remove comments bellow if you are using hosting
+	'hostname' => '45.13.255.81',
+	'username' => 'u1602015_filsvox',
+	'password' => 'filsvox2022',
+	'database' => 'u1602015_filsvox',
+
+	// For Local - Remove comments bellow if you are using local
+	// 'hostname' => 'localhost',
+	// 'username' => 'root',
+	// 'password' => '',
+	// 'database' => 'filsvox-ci',
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

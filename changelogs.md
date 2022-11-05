@@ -8,11 +8,16 @@ All notable changes to this project will be documented in this file.
 - Added : Now you can add trailer video, if trailer video is not available, you can add only cover image
 - Added : Now you can added detail information ( directors, writers and film actors )
 - Added : Introduce chart for film count published by month per year
+- Added : Introduce chart for film count published by category per year
+- Added : You can add new category from admin dashboard, also you can delete category
+- Added : Can see all film by category from admin dashboard, if you click on category button
 - Change : Merge to Quill.JS for better text editor
 - Change : Improve navbar background color in Dashboard
 - Change : Improve action buttons in article list
 - Change : Full redesign of the dashboard UI
 - Change : Full redesign of the form article UI
+- Change : Full redesign of the edit form article UI
+- Change : Improve folder structure for better scalability
 - Fixed : The search result layout display has been fixed
 - Fixed : All minor bugs
 - Issue : For trailers only supports direct video links, does not support videos from youtube (due to copyright issues)
