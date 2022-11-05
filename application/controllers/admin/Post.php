@@ -19,9 +19,9 @@ class Post extends CI_Controller
     $data['current_user'] = $this->auth_model->current_user();
     $data['articles'] = $this->article_model->get();
     if (count($data['articles']) <= 0) {
-      $this->load->view('admin/post_empty.php', $data);
+      $this->load->view('admin/post/post_empty.php', $data);
     } else {
-      $this->load->view('admin/post_list.php', $data);
+      $this->load->view('admin/post/post_list.php', $data);
     }
   }
 
@@ -69,7 +69,7 @@ class Post extends CI_Controller
       }
     }
 
-    $this->load->view('admin/post_new_form.php', $data);
+    $this->load->view('admin/post/post_new_form.php', $data);
   }
 
   // Edit Artikel
@@ -90,7 +90,7 @@ class Post extends CI_Controller
       $this->form_validation->set_rules($rules);
 
       if ($this->form_validation->run() === FALSE) {
-        return $this->load->view('admin/post_edit_form.php', $data);
+        return $this->load->view('admin/post/post_edit_form.php', $data);
       }
 
       $article = [
@@ -116,7 +116,7 @@ class Post extends CI_Controller
       }
     }
 
-    $this->load->view('admin/post_edit_form.php', $data);
+    $this->load->view('admin/post/post_edit_form.php', $data);
   }
 
   // Delete Artikel

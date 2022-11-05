@@ -34,7 +34,7 @@
               </div>
             </div>
 
-            <div class="bg-gray-600 shadow rounded-lg p-4 sm:p-6 xl:p-8">
+            <div class="bg-cyan-700 shadow rounded-lg p-4 sm:p-6 xl:p-8">
               <div class="flex items-center">
                 <div class="flex-shrink-0">
                   <span class="text-2xl sm:text-3xl leading-none font-bold text-white"><?= $draft_count ?></span>
@@ -56,7 +56,7 @@
               </div>
             </div> -->
 
-            <div class="bg-indigo-600 shadow rounded-lg p-4 sm:p-6 xl:p-8">
+            <div class="bg-indigo-400 shadow rounded-lg p-4 sm:p-6 xl:p-8">
               <div class="flex items-center">
                 <div class="flex-shrink-0">
                   <span class="text-2xl sm:text-3xl leading-none font-bold text-white"><?= $category_count; ?></span>
@@ -68,11 +68,19 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-1 2xl:grid-cols-2 xl:gap-4 my-4">
-            <!-- Top Sales Card -->
+          <div class="mt-4 w-full grid grid-cols-1 md:grid-cols-4 xl:grid-cols-2 gap-2">
+
+            <div class="bg-gray-800 shadow rounded-lg mb-4 p-4 sm:p-6 h-full">
+              <span class="leading-none text-center mb-5 block text-gray-300">Artikel per-bulan</span>
+              <div>
+                <canvas class="text-light" id="bymonth"></canvas>
+              </div>
+            </div>
+
             <div class="bg-gray-800 shadow rounded-lg mb-4 p-4 sm:p-6 h-full">
               <div>
-                <canvas class="p-5 text-light" id="chartLine"></canvas>
+                <span class="leading-none text-center mb-5 block text-gray-300">Artikel per-kategori</span>
+                <canvas class="text-light" id="bycategory"></canvas>
               </div>
             </div>
           </div>
@@ -82,61 +90,11 @@
   </main>
 
   <!-- Required chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
 
-  <!-- Chart line -->
-  <script>
-    const labels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const data = {
-      labels: labels,
-      datasets: [{
+  <!-- Load view chart.php di folder admin -->
+  <?php $this->load->view('admin/statistics/chart.php'); ?>
 
-        label: "Artikel",
-        backgroundColor: "#A3C7D6",
-        borderColor: "hsl(252, 82.9%, 67.8%)",
-        color: "#fff",
-
-        // Ambil data artikel berdasarkan bulan di tabel article
-        data: [<?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 1")->row()->jml; ?>,
-          <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 2")->row()->jml; ?>,
-          <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 3")->row()->jml; ?>,
-          <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 4")->row()->jml; ?>,
-          <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 5")->row()->jml; ?>,
-          <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 6")->row()->jml; ?>,
-          <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 7")->row()->jml; ?>,
-          <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 8")->row()->jml; ?>,
-          <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 9")->row()->jml; ?>,
-          <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 10")->row()->jml; ?>,
-          <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 11")->row()->jml; ?>,
-          <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 12")->row()->jml; ?>
-        ],
-      }]
-    };
-
-    const configLineChart = {
-      type: "bar",
-      // Color Bar
-      options: {
-        animation: true,
-        plugins: {
-          legend: {
-            display: false,
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      },
-      data,
-    };
-
-    var chartLine = new Chart(
-      document.getElementById("chartLine"),
-      configLineChart
-    );
-  </script>
 </body>
 
 </html>
