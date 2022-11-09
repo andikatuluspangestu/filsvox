@@ -67,10 +67,10 @@
                   <span class="sr-only">Close modal</span>
                 </button>
                 <div class="py-6 px-6 lg:px-8">
-                  <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Tambah Kategori</h3>
+                  <h3 class="mb-4 text-xl font-medium text-gray-100 dark:text-white">Tambah Kategori</h3>
                   <form class="space-y-6" method="post" action="<?php echo base_url('admin/category/new'); ?>">
                     <div>
-                      <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nama Kategori</label>
+                      <label for="category" class="block mb-2 text-sm font-medium text-gray-300">Nama Kategori</label>
                       <input type="text" name="name" id="category" class="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" placeholder="Advanture" required="Wajib di isi">
                     </div>
 

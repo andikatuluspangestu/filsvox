@@ -26,7 +26,24 @@ class Search extends CI_Controller
     $this->load->view('partials/footer');
   }
 
-  // Buat function menampilkan hasil pencarian artikel by kategori
+  // Function Serach in Mobile Layouts
+  public function find()
+  {
+
+    $data['categories'] = $this->article_model->get_kategori();
+    $data['articles'] = $this->article_model->get_published();
+    $data['keyword'] = $this->input->get('keyword');
+    $this->load->model('article_model');
+
+    $data['search_result'] = $this->article_model->search($data['keyword']);
+
+    $this->load->view('mobile/partials/header');
+    $this->load->view('mobile/article/search', $data);
+    $this->load->view('mobile/partials/footer');
+  }
+
+
+  // Function menampilkan hasil pencarian artikel by kategori
   public function kategori($category_id)
   {
     // Ambil semua kategori

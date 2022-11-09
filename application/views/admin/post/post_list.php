@@ -16,6 +16,7 @@
       margin-bottom: 40px !important;
       color: white !important;
     }
+
     .search {
       color: white !important;
     }
@@ -102,13 +103,11 @@
           },
           className: 'btn btn-primary'
         }],
-        searching : true,
-        searching : [
-          {
-            "smart": true,
-            className: 'form-control'
-          }
-        ],
+        searching: true,
+        searching: [{
+          "smart": true,
+          className: 'form-control'
+        }],
         "order": [
           [0, "asc"]
         ]
@@ -119,12 +118,12 @@
   <script>
     function deleteConfirm(event) {
       Swal.fire({
-        title: 'Delete Confirmation!',
-        text: 'Are you sure to delete the item?',
+        title: 'Konfirmasi Hapus!',
+        text: 'Apakah kamu yakin menghapus item ini?',
         icon: 'warning',
         showCancelButton: true,
-        cancelButtonText: 'No',
-        confirmButtonText: 'Yes Delete',
+        cancelButtonText: 'Tidak',
+        confirmButtonText: 'Ya Hapus',
         confirmButtonColor: 'red'
       }).then(dialog => {
         if (dialog.isConfirmed) {

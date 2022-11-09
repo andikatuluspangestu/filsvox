@@ -1,7 +1,7 @@
 <!-- Chart Perbulan -->
 <script>
   var dataBar = {
-    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+    labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
     datasets: [{
       borderColor: 'rgba(153, 102, 255, 1)',
       tension: 0.1,
@@ -24,7 +24,7 @@
   };
 
   var dataCategory = {
-    labels: ["Horror", "Romance", "Action", "Korea", "Japanese", "Documentary", "Commedy", "Advanture", "Animated", "Family", "Fantasy", "Sci-fi", "Thriller", "Mystery", "Inspiration", "Musical", "Drama"],
+    labels: ["Horror", "Romance", "Action", "Korea", "Documentary", "Commedy", "Advanture", "Animated", "Family", "Fantasy", "Sci-fi", "Thriller", "Musical", "Drama"],
     datasets: [{
       backgroundColor: [
         'rgba(255, 99, 132, 1)',

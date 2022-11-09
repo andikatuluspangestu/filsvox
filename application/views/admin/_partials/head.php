@@ -17,9 +17,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- All Vendor CSS -->
-  <link href="sweetalert2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5.0.14/dark.min.css">
   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-  <link href="https://cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -5,12 +5,6 @@
 	<!-- Menu -->
 	<div class="mt-12 flex flex-col gap-y-4 text-gray-500 fill-gray-500 text-sm">
 		<div class="text-gray-400/70  font-medium uppercase">Menu</div>
-		<a class=" flex items-center space-x-2 py-1  group hover:border-r-4 hover:border-r-red-600 hover:font-semibold dark:hover:text-white " href="#">
-			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-broadcast" viewBox="0 0 16 16">
-				<path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
-			</svg>
-			<span>Komunitas</span>
-		</a>
 
 		<div class="dropdown dropdown-right">
 			<a tabindex="0" class="flex items-center space-x-2 py-1  group hover:border-r-4 hover:border-r-red-600 hover:font-semibold dark:hover:text-white" href="#">
@@ -21,7 +15,7 @@
 				<span>Kategori</span>
 			</a>
 
-			<ul tabindex="0" class="dropdown-content menu p-2 shadow bg-slate-800 w-52">
+			<ul tabindex="0" class="dropdown-content menu p-2 shadow bg-slate-800 w-52 rounded-2xl">
 				<?php foreach ($categories as $category) : ?>
 					<li class="hover:text-white"><a href="<?= base_url('/search/kategori/') . $category->id; ?>" class="focus:text-white focus:bg-slate-800"><?= $category->name; ?></a></li>
 				<?php endforeach; ?>
@@ -37,6 +31,14 @@
 			</svg>
 			<span>Akan Datang</span>
 		</a>
+
+		<!-- <a class="flex items-center space-x-2 py-1  group hover:border-r-4 hover:border-r-red-600 hover:font-semibold dark:hover:text-white " href="#" for="my-modal" class="btn">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
+				<path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+				<path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
+			</svg>
+			<span>Developer</span>
+		</a> -->
 
 		<!-- Social Media -->
 		<div class="mt-8 text-gray-400/70  font-medium uppercase">Social</div>
@@ -58,6 +60,10 @@
 			</svg>
 			<span>Twitter</span>
 		</a>
+
+		<label for="my-modal" class="btn btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+				<path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+			</svg> &nbsp; For Developer </label>
 
 		<!-- Menu Lainnya -->
 		<!-- <div class="mt-8 text-gray-400/70  font-medium uppercase">General</div>

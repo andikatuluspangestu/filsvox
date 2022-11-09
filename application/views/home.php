@@ -13,6 +13,7 @@
             $this->load->view('partials/responsive.php');
             ?>
 
+
             <!-- Headline -->
             <section>
                 <nav class="flex space-x-6 text-gray-400 font-medium">
@@ -20,6 +21,21 @@
                     <a href="#" class="text-gray-400 hover:text-white dark:text-white">Korea</a>
                     <a href="#" class="hover:text-white dark:hover:text-white ">Japan</a>
                 </nav>
+
+                <input type="checkbox" id="my-modal" class="modal-toggle" />
+                <div class="modal">
+                    <div class="modal-box bg-gray-900">
+                        <h3 class="font-bold text-gray-100 text-lg mb-4">Get your APIs</h3>
+
+                        <div class="form-control">
+                            <input type="text" name="name" id="category" class="border text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" value="<?= base_url('/api'); ?>" disabled>
+                        </div>
+
+                        <div class="modal-action">
+                            <label for="my-modal" class="btn btn-sm rounded-2xl btn-primary">Close</label>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Tampilkan headline jika artikel dengan headline true -->
                 <?php foreach ($articles as $article) : ?>
@@ -138,4 +154,6 @@
         ?>
 
     </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>

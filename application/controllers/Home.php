@@ -34,6 +34,27 @@ class Home extends CI_Controller
 		}
 	}
 
-	// Buat function pencarian
+	public function mobile()
+	{
 
+		// ambil kategori artikel berdasarkan headline
+		$data['categories'] = $this->article_model->get_kategori();
+
+		// ambil artikel yang statusnya bukan draft dengan LIMIT 6
+		$data['articles'] = $this->article_model->get_published(6, 0);
+
+		if (count($data['articles']) > 0) {
+			// kirim data artikel ke view
+			// $this->load->view('partials/header');
+			// $this->load->view('partials/navbar');
+			$this->load->view('mobile/index', $data);
+			// $this->load->view('partials/footer');
+		} else {
+			// kirim data artikel ke view
+			$this->load->view('partials/header');
+			$this->load->view('partials/navbar');
+			$this->load->view('artikel/not_found');
+			$this->load->view('partials/footer');
+		}
+	}
 }

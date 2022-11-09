@@ -55,6 +55,9 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['admin'] = 'admin/dashboard';
 $route['article/(:any)'] = 'article/show/$1';
+$route['article/read'] = 'article/read/$1';
 
 // Create Router for All Article
 $route['article'] = 'article';
+
+$route['mobile'] = '/home/mobile';
