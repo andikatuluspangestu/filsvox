@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Change : Introduce new favicon
 - Change : Improve context menu container UI
 - Change : Improve count card UI in Dashboard
+- Change : Improve Login and Register UI
 - Change : Improve Add Category UI Form
 - Change : Full Re-design UI for Login Page
 - Change : More categories has been deleted

@@ -24,8 +24,8 @@
 
 <body>
   <div class="min-h-screen sm:flex sm:flex-row justify-center bg-gray-900">
-    <div class="flex-col flex  self-center lg:p-10 sm:max-w-5xl xl:max-w-lg  z-10">
-      <div class="self-start hidden lg:flex flex-col  text-white">
+    <div class="flex-col flex  self-center sm:py-5 sm:max-w-5xl xl:max-w-lg  z-10">
+      <div class="self-start hidden lg:flex flex-col text-white">
         <div class="flex items-center mb-5"><img src="<?= base_url('/assets/images/icon.png'); ?>" class="w-10">
           <h3 class="text-3xl font-bold ml-3 border-b-2"> FILSVOX</h3>
         </div>
