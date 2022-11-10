@@ -1,7 +1,7 @@
 ### **Changelogs**
 All notable changes to this project will be documented in this file.
 
-> [ v3.0.0 ] Unreleased - TBD :
+> [ v2.2.0 ] Released - 10/11/2022 :
 - Added : User Register or Sign Up
 - Added : User Management
 - Added : Introduction Web API for Developers
