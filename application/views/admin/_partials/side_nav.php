@@ -61,8 +61,9 @@
             </a>
           </li>
 
-          <!-- Tampilkan menu kategori jika user memuliki role superadmin -->
-          <?php if ($this->auth_model->current_user()->role == 1) : ?>
+          <!-- Tampilkan menu kategori jika user memuliki role 1 -->
+
+          <?php if ($current_user->role == 1) : ?>
             <li>
               <a href="<?= site_url('admin/user') ?>" class="hover:text-gray-100 text-base bg-gray-800 text-gray-100 font-normal rounded-lg flex items-center p-2 hover:bg-gray-700 group">
                 <svg class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-100 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

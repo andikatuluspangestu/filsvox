@@ -14,16 +14,10 @@ class User extends CI_Controller
 
   public function index()
   {
-
-    // Jika current user memiliki role 1 maka tampilkan halaman ini
-    if ($this->auth_model->current_user()->role == 1) {
-      $data['title'] = 'Administrator';
-      $data['users'] = $this->user_model->get();
-      $this->load->view('admin/users/list_users', $data);
-    } else {
-      // Jika current user memiliki role selain 1 maka tampilkan halaman ini
-      redirect('admin/dashboard');
-    }
+    $data['current_user'] = $this->auth_model->current_user();
+    $data['title'] = 'Administrator';
+    $data['users'] = $this->user_model->get();
+    $this->load->view('admin/users/list_users', $data);
   }
 
   // Simpan data user

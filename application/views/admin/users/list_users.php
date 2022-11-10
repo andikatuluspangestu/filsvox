@@ -21,8 +21,7 @@
       color: white !important;
     }
   </style>
-  <!-- Force Darkmode -->
-  <meta name="color-scheme" content="dark">
+
 </head>
 
 <body class="bg-gray-900">
@@ -33,8 +32,12 @@
   <!-- Main Section -->
   <main class="main flex overflow-hidden bg-gray-900">
 
-    <!-- Sidebar -->
-    <?php $this->load->view('admin/_partials/side_nav.php') ?>
+    <?php
+
+    // Required for the sidebar
+    $this->load->view('/admin/_partials/side_nav.php');
+
+    ?>
 
     <!-- Article Section -->
     <div id="main-content" class="h-full w-full bg-gray-0 relative overflow-y-auto lg:ml-64 pb-5">

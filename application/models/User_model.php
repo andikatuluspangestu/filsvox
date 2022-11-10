@@ -29,6 +29,16 @@ class User_model extends CI_Model
     return $query->row();
   }
 
+  // Get current user
+  public function current_user()
+  {
+    $user = $this->session->userdata('user');
+    if ($user) {
+      return $this->get_by_id($user['id']);
+    }
+    return false;
+  }
+
   // Simpan data user
   public function insert_data($data)
   {
