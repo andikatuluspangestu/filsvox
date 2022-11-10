@@ -14,7 +14,7 @@ class Setting extends CI_Controller
   public function index()
   {
     $data['current_user'] = $this->auth_model->current_user();
-    $this->load->view('admin/setting', $data);
+    $this->load->view('admin/settings/setting', $data);
   }
 
   public function upload_avatar()

@@ -28,4 +28,12 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3163/3163508.png" type="image/x-icon" />
 
+  <!-- Force Darkmode -->
+  <meta name="color-scheme" content="dark">
+
+  <!-- Mulai lakukan session data user  -->
+  <?php
+    $user = $this->session->userdata('user');
+  ?>
+
 </head>

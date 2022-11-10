@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 - Added : User Management
 - Added : Introduction Web API for Developers
 - Added : Now the mobile version of filsvox is available, still web-based in BETA stage
+- Added : Now you can edit user profile
+- Added : More role has been added
 - Change : Introduce new favicon
 - Change : Improve context menu container UI
 - Change : Improve count card UI in Dashboard
@@ -13,6 +15,8 @@ All notable changes to this project will be documented in this file.
 - Change : Improve Add Category UI Form
 - Change : Full Re-design UI for Login Page
 - Change : More categories has been deleted
+- Fixed  : Minor Bugs
+- Issue  : #1 - Edit user profile avatar and password
 
 > [ v2.0.0 ] Released - 05/11/2022 :
 - Added : Now you can search or view list film by category
