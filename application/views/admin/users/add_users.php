@@ -69,6 +69,8 @@
                 <div class="py-6 px-6 lg:px-8">
                   <h3 class="mb-4 text-xl font-medium text-gray-100 dark:text-white">Tambah Kontributor</h3>
                   <form action="<?= base_url('auth/register'); ?>" method="post">
+                  <!-- Input hidden role -->
+                  <input type="hidden" name="role" value="2">
                     <div class="py-4 px-8">
                       <div class="flex mb-4">
                         <div class="w-1/2 mr-1">

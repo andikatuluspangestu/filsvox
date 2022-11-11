@@ -97,7 +97,7 @@
 
         <!-- Edit Akun -->
         <div class="bg-gray-800 mt-2 border border-gray-800 shadow-lg rounded-2xl p-4">
-          <form action="<?= base_url('admin/user/update/') ?>" method="post">
+          <form action="<?= base_url('admin/user/update/' . $current_user->id) ?>" method="post">
             <div class="py-4 px-8">
               <div class="flex mb-4">
                 <!-- Hidden ID -->
@@ -111,14 +111,18 @@
                   <input class="ext-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400" id="last_name" type="text" placeholder="Ketik username kamu" name="username" value="<?= $current_user->username ?>">
                 </div>
               </div>
-              <div class="mb-4">
-                <label class="block text-white text-sm font-bold mb-2" for="role">Role</label>
-                <!-- Membuat Role Dropdown -->
-                <select class="ext-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400" id="role" name="role">
-                  <option value="1">Admin</option>
-                  <option value="0">Kontributor</option>
-                </select>
-              </div>
+              <!-- Jika current user role 1 maka tampilkan input role -->
+              <?php if ($current_user->role == 1) : ?>
+                <div class="flex mb-4">
+                  <div class="w-1/2 mr-1">
+                    <label class="block text-white text-sm font-bold mb-2" for="role">Role</label>
+                    <select name="role" id="role" class="ext-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400">
+                      <option value="1" <?= $current_user->role == 1 ? 'selected' : '' ?>>Administrator</option>
+                      <option value="2" <?= $current_user->role == 2 ? 'selected' : '' ?>>Kontributor</option>
+                    </select>
+                  </div>
+                </div>
+              <?php endif; ?>
               <div class="mb-4">
                 <label class="block text-white text-sm font-bold mb-2" for="email">Email</label>
                 <input class="ext-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400" id="email" type="email" placeholder="namakamu@mail.com" name="email" value="<?= $current_user->email ?>">

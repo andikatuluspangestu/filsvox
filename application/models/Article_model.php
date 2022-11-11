@@ -25,14 +25,14 @@ class Article_model extends CI_Model
     return $query->result();
   }
 
-  // Buat Function untuk menampilkan semua kategori di tabel Category
+  // Function untuk menampilkan semua kategori di tabel Category
   public function get_kategori()
   {
     $query = $this->db->get('category');
     return $query->result();
   }
 
-  // Buat Function untuk mencari artikel berdasarkan slug
+  // Function untuk mencari artikel berdasarkan slug
   public function find_by_slug($slug)
   {
     if (!$slug) {
@@ -42,7 +42,7 @@ class Article_model extends CI_Model
     return $query->row();
   }
 
-  // Buat Function untuk mencari artikel berdasarkan id
+  // Function untuk mencari artikel berdasarkan id
   public function find($id)
   {
     if (!$id) {
@@ -97,6 +97,18 @@ class Article_model extends CI_Model
     return $this->db->count_all('category');
   }
 
+  // Function untuk mengupdate jumlah visitor
+  function update_counter($slug)
+  {
+    $this->db->where('slug', urldecode($slug));
+    $this->db->select('visitor');
+    $count = $this->db->get('article')->row();
+
+    $this->db->where('slug', urldecode($slug));
+    $this->db->set('visitor', ($count->visitor + 1));
+    $this->db->update('article');
+  }
+
   // Menampilkan Data dengan REST API
   public function get_all()
   {
@@ -115,6 +127,20 @@ class Article_model extends CI_Model
     $this->db->like('title', $keyword);
     $this->db->or_like('content', $keyword);
     $query = $this->db->get($this->_table);
+    return $query->result();
+  }
+
+  // Pencarian Film berdasarkan judul, directors, writers, actors
+  public function search_film($keyword)
+  {
+    if (!$keyword) {
+      return null;
+    }
+    $this->db->like('title', $keyword);
+    $this->db->or_like('directors', $keyword);
+    $this->db->or_like('writers', $keyword);
+    $this->db->or_like('actors', $keyword);
+    $query = $this->db->get('film');
     return $query->result();
   }
 

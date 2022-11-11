@@ -10,6 +10,7 @@
             <th scope="col">No</th>
             <th scope="col">Nama</th>
             <th scope="col">Username</th>
+            <th scope="col">Role</th>
             <th scope="col">Email</th>
             <th scope="col">Action</th>
           </tr>
@@ -28,6 +29,15 @@
               <!-- Tampilkan jumlah artikel draft pada setiap kategori -->
               <td>
                 <?= $user->email ?>
+              </td>
+
+              <td>
+                <!-- Jika role 1 tampilkan sebagai admin -->
+                <?php if ($user->role == 1) : ?>
+                  Admin
+                <?php else : ?>
+                  Kontributor
+                <?php endif; ?>
               </td>
 
               <td>

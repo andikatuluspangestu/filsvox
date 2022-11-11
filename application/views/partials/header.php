@@ -33,17 +33,22 @@
 	<meta name="googlebot" content="noindex,nofollow">
 	<meta name"keyword" content="film, movie, review, ulasanfilm, imdb, serialtv, rakor, drama">
 
-	<script src="<?= base_url('/assets/js/redirection-mobile.js'); ?>"></script>
-	<script>
-		// Buat variabel untuk menyimpan link halaman mobile
-		var mobile = "localhost/filsvox/mobile";
+	<style>
+		/* Sembunyikan btn-toggle di layar laptop */
 
-		SA.redirection_mobile({
-			mobile_url: mobile,
-			mobile_prefix: "https",
-			keep_path: true,
-			keep_query: true
-		});
+		@media (min-width: 1024px) {
+			#btn-toggle {
+				display: none;
+			}
+		}
+	</style>
+
+	<script>
+		// Jika pada media query smartphone arahkan ke google.com
+		if (window.matchMedia("(max-width: 768px)").matches) {
+			var mobile = "<?= base_url('/mobile'); ?>"
+			window.location.replace(mobile);
+		}
 	</script>
 
 </head>

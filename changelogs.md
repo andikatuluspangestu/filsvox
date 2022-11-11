@@ -1,11 +1,17 @@
 ### **Changelogs**
 All notable changes to this project will be documented in this file.
 
-> [ v2.2.0 ] Released - 10/11/2022 :
+> [ v3.0.0 ] Released - 11/11/2022 :
 - Added : User Register or Sign Up
 - Added : User Management
 - Added : Introduction Web API for Developers
 - Added : Now the mobile version of filsvox is available, still web-based in BETA stage
+- Added : Now if you use a smartphone, you will be directed to the mobile-view web page
+- Added : Now you can search film by title, artist, genre, and writers ( BETA )
+- Added : Search by category in mobile view has worked well
+- Added : Now every movie has a star rating ( BETA )
+- Added : You can now see the number of visitors in each movie review ( BETA )
+- Added : Improved search results page in mobile view to make it more concise
 - Added : Now you can edit user profile
 - Added : More role has been added
 - Change : Introduce new favicon
@@ -15,8 +21,12 @@ All notable changes to this project will be documented in this file.
 - Change : Improve Add Category UI Form
 - Change : Full Re-design UI for Login Page
 - Change : More categories has been deleted
-- Fixed  : Minor Bugs
-- Issue  : #1 - Edit user profile avatar and password
+- Fixed  : Only admins can change contributor roles
+- Fixed  : Contributors shouldn't be able to access the contributor management page
+- Fixed  : Fixed an error adding new contributors
+- Fixed  : Edit password on user profile has been fixed
+- Fixed  : Minor bug fixes
+- Issue  : #1 - Edit user profile avatar and password ( Closed )
 
 > [ v2.0.0 ] Released - 05/11/2022 :
 - Added : Now you can search or view list film by category

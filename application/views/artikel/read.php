@@ -55,10 +55,15 @@
                       <td> &nbsp; : &nbsp; </td>
                       <td><?= $article->release_date ?></td>
                     </tr>
+                    <!-- Hitung jumlah visitor -->
                     <!-- <tr>
-                      <td>Publish</td>
+                      <td>Views</td>
                       <td> &nbsp; : &nbsp; </td>
-                      <td>Nulled</td>
+                      <td>
+                        <?php
+                        echo $article->visitor;
+                        ?>
+                      </td>
                     </tr> -->
                   </table>
                   <br>
