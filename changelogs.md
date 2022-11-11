@@ -21,10 +21,12 @@ All notable changes to this project will be documented in this file.
 - Change : Improve Add Category UI Form
 - Change : Full Re-design UI for Login Page
 - Change : More categories has been deleted
+- Change : Only admins can delete categories
 - Fixed  : Only admins can change contributor roles
 - Fixed  : Contributors shouldn't be able to access the contributor management page
 - Fixed  : Fixed an error adding new contributors
 - Fixed  : Edit password on user profile has been fixed
+- Fixed  : Current user not detected in sidebar has been fixed
 - Fixed  : Minor bug fixes
 - Issue  : #1 - Edit user profile avatar and password ( Closed )
 

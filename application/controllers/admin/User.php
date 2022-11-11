@@ -14,9 +14,9 @@ class User extends CI_Controller
 
   public function index()
   {
+    $data['current_user'] = $this->auth_model->current_user();
     // Jika current user memiliki role 1 maka tampilkan semua user
     if ($this->auth_model->current_user()->role == 1) {
-      $data['current_user'] = $this->auth_model->current_user();
       $data['title'] = 'Administrator';
       $data['users'] = $this->user_model->get();
       $this->load->view('admin/users/list_users', $data);

@@ -81,14 +81,15 @@
                 <div class="p-6 space-y-6">
 
                   <form action="<?= base_url('admin/user/register'); ?>" method="post">
-                    <div class="mb-6">
-                      <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nama Lengkap</label>
-                      <input type="name" id="name" name="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="masukan nama lengkap kamu" required="">
-                    </div>
-
-                    <div class="mb-6">
-                      <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Username</label>
-                      <input type="username" id="username" name="username" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="masukan username" required="">
+                    <div class="flex mb-4">
+                      <div class="w-1/2 mr-1">
+                        <label class="block text-white text-sm font-bold mb-2" for="first_name">Nama Lengkap</label>
+                        <input class="ext-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400" id="first_name" type="text" placeholder="Masukan nama lengkap" name="name">
+                      </div>
+                      <div class="w-1/2 ml-1">
+                        <label class="block text-white text-sm font-bold mb-2" for="last_name">Username</label>
+                        <input class="ext-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400" id="last_name" type="text" placeholder="Ketik username kamu" name="username">
+                      </div>
                     </div>
 
                     <div class="mb-6">
@@ -96,14 +97,23 @@
                       <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="masukan email" required="">
                     </div>
 
-                    <div class="mb-6">
-                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>
-                      <input type="password" id="password" name="password1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" placeholder="*****">
+                    <div class="flex mb-4">
+                      <div class="w-1/2 mr-1">
+                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>
+                        <input type="password" id="password" name="password1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" placeholder="*****">
+                      </div>
+                      <div class="w-1/2 ml-1">
+                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ulangi Password</label>
+                        <input type="password" id="password" name="password2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" placeholder="*****">
+                      </div>
                     </div>
 
-                    <div class="">
-                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ulangi Password</label>
-                      <input type="password" id="password" name="password2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" placeholder="*****">
+                    <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="role">Role</label>
+                      <select class="ext-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400" id="role" name="role">
+                        <option value="1">Admin</option>
+                        <option value="2">Kontributor</option>
+                      </select>
                     </div>
                 </div>
                 <!-- Modal footer -->

@@ -69,8 +69,6 @@
                 <div class="py-6 px-6 lg:px-8">
                   <h3 class="mb-4 text-xl font-medium text-gray-100 dark:text-white">Tambah Kontributor</h3>
                   <form action="<?= base_url('auth/register'); ?>" method="post">
-                  <!-- Input hidden role -->
-                  <input type="hidden" name="role" value="2">
                     <div class="py-4 px-8">
                       <div class="flex mb-4">
                         <div class="w-1/2 mr-1">
@@ -95,6 +93,14 @@
                       <div class="mb-4">
                         <label class="block text-white text-sm font-bold mb-2" for="password">Ulangi Password</label>
                         <input class="ext-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400" id="password2" type="password" placeholder="*******" name="password2">
+                      </div>
+                      <!-- Input Role -->
+                      <div class="mb-4">
+                        <label class="block text-white text-sm font-bold mb-2" for="role">Role</label>
+                        <select class="ext-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400" id="role" name="role">
+                          <option value="1">Admin</option>
+                          <option value="2">Kontributor</option>
+                        </select>
                       </div>
                       <div class="flex items-center justify-between pb-4 mt-4">
                         <button class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-lg" type="submit">
