@@ -1,6 +1,23 @@
 ### **Changelogs**
 All notable changes to this project will be documented in this file.
 
+> [ v3.0.1 ] Unreleased - TBD :
+- Added  : You now have the option to view the latest movie reviews for the past week
+- Added  : Now you can see the most popular movie reviews on the explore page
+- Change : The Headlines feature may have been enabled for some contributors
+- Change : Complete overhaul of UIUX in explore page to improve user experience
+- Change : Changed the bottom navbar design style, floating to fixed bottom
+- Fixed : ``issue #1`` has been fixed
+- Fixed : Headline placement has been improved on mobile and desktop
+
+---
+
+- ``Issue #1`` : The search form card in the mobile-view displays a light theme, when the device system uses a light color scheme
+- ``Issue #2`` : The genre badge button on the main mobile-view page is not working
+- ``Issue #3`` : The search keyword for the title of the film must be case sensitive
+- ``Issue #4`` : Popular and favorite movie section still not showing correct information
+
+
 > [ v3.0.0 ] Released - 11/11/2022 :
 - Added : User Register or Sign Up
 - Added : User Management

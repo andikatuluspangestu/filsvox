@@ -110,4 +110,32 @@ class Search extends CI_Controller
     $this->load->view('mobile/partials/footer');
   }
 
+  //  Cari artikel yang memiliki visitor lebih dari 100
+  public function popular()
+  {
+    // Tampilkan artikel yang memiliki visitor lebih dari 100
+    $data['search_result'] = $this->article_model->get_popular();
+
+    // Title
+    $data['title'] = 'Popular Articles';
+
+    $this->load->view('mobile/partials/header');
+    $this->load->view('mobile/article/popular', $data);
+    $this->load->view('mobile/partials/footer');
+  }
+
+  // Cari artikel yang baru dipublish (terbaru)
+  public function latest()
+  {
+    // Tampilkan artikel yang memiliki visitor lebih dari 100
+    $data['search_result'] = $this->article_model->get_latest();
+
+    // Title
+    $data['title'] = 'Latest Articles';
+
+    $this->load->view('mobile/partials/header');
+    $this->load->view('mobile/article/popular', $data);
+    $this->load->view('mobile/partials/footer');
+  }
+
 }

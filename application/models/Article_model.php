@@ -144,6 +144,30 @@ class Article_model extends CI_Model
     return $query->result();
   }
 
+  // Cari artikel yang memiliki visitor lebih dari 100
+  public function get_popular()
+  {
+    $this->db->where('visitor >', 50);
+    $query = $this->db->get($this->_table);
+    return $query->result();
+  }
+
+  // Cari artikel terbaru dalam seminggu terakhir
+  public function get_latest()
+  {
+    $this->db->where('created_at >', date('Y-m-d', strtotime('-7 days')));
+    $query = $this->db->get($this->_table);
+    return $query->result();
+  }
+
+  // Cari artikel yang memiliki headline = TRUE
+  public function get_headline()
+  {
+    $this->db->where('headline', 'true');
+    $query = $this->db->get($this->_table);
+    return $query->result();
+  }
+
   // Pencarian Film berdasarkan Kategori
   public function search_by_category($category_id)
   {

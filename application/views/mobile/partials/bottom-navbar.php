@@ -1,4 +1,4 @@
- <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-5 bg-slate-900 shadow m-4 px-4 rounded-2xl">
+ <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-5 bg-slate-900 shadow-2xl px-3 py-2">
    <div id="myTab" data-tabs-toggle="#myTabContent" role="tablist" class="flex justify-between">
 
      <!-- Home -->
@@ -37,12 +37,12 @@
      </button>
 
      <!-- Soon -->
-     <!-- <button class="w-full focus:text-red-500 hover:text-red-500 justify-center inline-block text-center pt-2 pb-1" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false" role="presentation">
+     <button class="w-full focus:text-red-500 hover:text-red-500 justify-center inline-block text-center pt-2 pb-1" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false" role="presentation">
        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block mb-1">
          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
        </svg>
 
        <span class="tab tab-home block text-xs">Soon</span>
-     </button> -->
+     </button>
    </div>
  </section>

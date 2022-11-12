@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FILSVOX | Get Movies Review</title>
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Favicon -->
@@ -40,6 +41,11 @@
       /* IE and Edge */
       scrollbar-width: none;
       /* Firefox */
+    }
+
+    /* Jika aria-selected bernilai true jadikan text warna merah */
+    [aria-selected="true"] {
+      color: #e53e3e !important;
     }
   </style>
 </head>
