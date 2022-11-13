@@ -107,6 +107,13 @@
               </div>
             </div>
 
+            <!-- Detail Content -->
+            <input type="text" hidden name="contributor" value="<?= $current_user->name ?>">
+            <input type="text" hidden name="directors" value"<?= $article->directors ?>">
+            <input type="text" hidden name="writers" value"<?= $article->writers ?>">
+            <input type="text" hidden name="actors" value"<?= $article->actors ?>">
+            <input type="text" hidden name="release_date" value"<?= $article->release_date ?>">
+
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 text-right">
                 <button type="submit" name="draft" class="text-white bg-gray-900 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700" value="true">Save to Draft</button>

@@ -1,5 +1,5 @@
 <!-- Tab Pertama -->
-<div class="w-full md:w-1/2 lg:w-1/4 pl-5 mt-5 pr-5 mb-5 lg:pl-2 lg:pr-2" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+<div class="w-full md:w-1/2 lg:w-1/4 pl-5 mt-5 pr-5 mb-20 lg:pl-2 lg:pr-2" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
   <div id="animation-carousel" class="relative" data-carousel="static">
     <!-- Carousel wrapper -->
@@ -30,7 +30,7 @@
   </div>
 
   <!-- Search -->
-  <form class="flex items-center my-3" action="<?= base_url('/search/find') ?>" method="get">
+  <form class="flex items-center mb-3" action="<?= base_url('/search/find') ?>" method="get">
     <label for="voice-search" class="sr-only"></label>
     <div class="relative w-full">
       <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -50,7 +50,7 @@
 
   <!-- Badge Kategori -->
 
-  <span class="text-sm font-medium mr-2 px-2.5 py-0.5 mb-5 rounded-2xl bg-red-700 text-gray-300">
+  <!-- <span class="text-sm font-medium mr-2 px-2.5 py-0.5 mb-5 rounded-2xl bg-red-700 text-gray-300">
     All Genre
   </span>
 
@@ -64,7 +64,7 @@
 
   <span class="text-sm font-medium mr-2 px-2.5 py-0.5 mb-5 rounded-2xl bg-gray-700 text-gray-300">
     Action
-  </span>
+  </span> -->
 
   <div class="flex flex-col mt-2">
     <?php foreach ($articles as $article) : ?>

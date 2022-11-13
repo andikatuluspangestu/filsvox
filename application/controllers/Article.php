@@ -41,6 +41,9 @@ class Article extends CI_Controller
     // Ambil artikel dengan slug yang diberikan
     $data['article'] = $this->article_model->find_by_slug($slug);
 
+    // ambil artikel yang memiliki visitor terbanyak
+    $data['popular'] = $this->article_model->get_most_viewed();
+
     // Jika artikel tidak ditemuakn di database tampilkan 404
     if (!$data['article']) {
       show_404();
@@ -60,19 +63,24 @@ class Article extends CI_Controller
       show_404();
     }
 
-    // Ambil Data Kategori
-    $data['categories'] = $this->article_model->get_kategori();
+    // Jika artikel memiliki status draft true maka tampilkan 404
+    if ($this->article_model->get_draft_by_slug($slug)) {
+      // Redirect
+    } else {
+      // Ambil Data Kategori
+      $data['categories'] = $this->article_model->get_kategori();
 
-    // Ambil artikel dengan slug yang diberikan
-    $data['article'] = $this->article_model->find_by_slug($slug);
+      // Ambil artikel dengan slug yang diberikan
+      $data['article'] = $this->article_model->find_by_slug($slug);
 
-    // Jika artikel tidak ditemuakn di database tampilkan 404
-    if (!$data['article']) {
-      show_404();
+      // tampilkan artikel
+      $this->load->view('mobile/article/read', $data);
+
+      // Jika artikel tidak ditemuakn di database tampilkan 404
+      if (!$data['article']) {
+        show_404();
+      }
     }
-
-    // tampilkan artikel
-    $this->load->view('mobile/article/read', $data);
   }
 
   // Function to count the number of visitors per article
@@ -87,7 +95,4 @@ class Article extends CI_Controller
       $this->article_model->update_counter(urldecode($slug));
     }
   }
-
-
-
 }

@@ -42,14 +42,19 @@ class Post extends CI_Controller
       }
 
       $slug = url_title($this->input->post('title'), 'dash', TRUE);
+      $newSlug = str_replace('-', '', $slug);
+
+      $youtube_url = $this->input->post('trailer');
+      $youtube_id = substr($youtube_url, -11);
 
       $article = [
         'id' => $this->input->post('id'),
-        'title' => $this->input->post('title'),
+        'title' => ucwords($this->input->post('title')),
+        'contributor' => $this->input->post('contributor'),
         'cover' => $this->input->post('cover'),
-        'trailer' => $this->input->post('trailer'),
+        'trailer' => $youtube_id,
         'kategori' => $this->input->post('kategori'),
-        'slug' => $slug,
+        'slug' => $newSlug,
         'content' => $this->input->post('content'),
         'headline' => $this->input->post('headline'),
         'draft' => $this->input->post('draft'),

@@ -21,11 +21,7 @@
             <div class="md:flex-shrink-0">
 
               <!-- Jika tidak ada video maka tampilkan gambar -->
-              <?php if ($article->trailer == null) { ?>
-                <img class="w-full object-cover md:h-full md:w-48" src="<?php echo $article->cover ?>" alt="" style="height: 220px !important;">
-              <?php } else { ?>
-                <iframe class="h-48 w-full object-cover md:h-full md:w-48" src="<?php echo $article->trailer ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <?php } ?>
+              <img class="w-full object-cover md:h-full md:w-48" src="<?php echo $article->cover ?>" alt="" style="height: 235px !important;">
 
             </div>
             <div class="p-8">
@@ -70,9 +66,11 @@
 
                   <?php foreach ($categories as $category) : ?>
                     <?php if ($category->id == $article->kategori) : ?>
-                      <span class="rounded-lg text-sm p-2 mt-5 bg-slate-900"><?= $category->name ?></span>
+                      <label class="btn btn-sm"><?= $category->name ?></label>
                     <?php endif; ?>
                   <?php endforeach; ?>
+
+                  <label for="my-modal-5" class="btn btn-sm bg-red-700 text-gray-100 hover:bg-red-800">Watch Trailer</label>
                 </div>
             </div>
           </div>
@@ -130,6 +128,26 @@
         <div class="m-3" id="disqus_thread">
         </div>
       </section>
+
+      <!-- Trailer Modal -->
+      <input type="checkbox" id="my-modal-5" class="modal-toggle" />
+      <div class="modal">
+        <div class="modal-box w-11/12 max-w-5xl bg-slate-800">
+          <?php if ($article->trailer == null) : ?>
+            <div class="modal-body">
+              <p class="text-gray-100">Trailer tidak tersedia untuk saat ini</p>
+            </div>
+            <div class="modal-action">
+              <label for="my-modal-5" class="btn btn-sm">Close</label>
+            </div>
+          <?php else : ?>
+            <iframe class="rounded-2xl" width="100%" height="412px" src="https://www.youtube.com/embed/<?= $article->trailer ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="modal-action">
+              <label for="my-modal-5" class="btn btn-sm">Close</label>
+            </div>
+          <?php endif; ?>
+        </div>
+      </div>
 
     </main>
 

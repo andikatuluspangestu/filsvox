@@ -16,9 +16,13 @@ class Search extends CI_Controller
     $data['categories'] = $this->article_model->get_kategori();
     $data['articles'] = $this->article_model->get_published();
     $data['keyword'] = $this->input->get('keyword');
+
+    // Hilangkan tanda baca, spasi, dan parse ke hurif kecil
+    $keyword = strtolower(str_replace(' ', '', $data['keyword']));
+
     $this->load->model('article_model');
 
-    $data['search_result'] = $this->article_model->search($data['keyword']);
+    $data['search_result'] = $this->article_model->search($keyword);
 
     $this->load->view('partials/header');
     $this->load->view('partials/navbar');
@@ -129,6 +133,9 @@ class Search extends CI_Controller
   {
     // Tampilkan artikel yang memiliki visitor lebih dari 100
     $data['search_result'] = $this->article_model->get_latest();
+
+    //  Ambil artikel yang memiliki status draft false
+    $data['search_result'] = $this->article_model->get_published();
 
     // Title
     $data['title'] = 'Latest Articles';

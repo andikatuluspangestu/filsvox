@@ -21,63 +21,50 @@
                     <a href="#" class="hover:text-white dark:hover:text-white ">Japan</a>
                 </nav>
 
-                <input type="checkbox" id="my-modal" class="modal-toggle" />
-                <div class="modal">
-                    <div class="modal-box bg-gray-900">
-                        <h3 class="font-bold text-gray-100 text-lg mb-4">Get your APIs</h3>
-
-                        <div class="form-control">
-                            <input type="text" name="name" id="category" class="border text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" value="<?= base_url('/api'); ?>" disabled>
-                        </div>
-
-                        <div class="modal-action">
-                            <label for="my-modal" class="btn btn-sm rounded-2xl btn-primary">Close</label>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Headline -->
                 <div id="animation-carousel" class="relative" data-carousel="static">
                     <!-- Carousel wrapper -->
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                        <?php foreach ($headline as $article) : ?>
-                            <div class="hidden duration-200 ease-linear" data-carousel-item>
-                                <div class="flex flex-col justify-between mt-4 bg-black/10 bg-blend-multiply rounded-3xl h-80 overflow-hidden bg-cover bg-center px-7 pt-4 pb-6 text-white border-none shadows" style="background-image: url('<?= $article->cover; ?>');">
+                        <?php foreach ($articles as $article) : ?>
+                            <?php foreach ($headline as $article) : ?>
+                                <div class="hidden duration-200 ease-linear" data-carousel-item>
+                                    <div class="flex flex-col justify-between mt-4 bg-black/10 bg-blend-multiply rounded-3xl h-80 overflow-hidden bg-cover bg-center px-7 pt-4 pb-6 text-white border-none shadows" style="background-image: url('<?= $article->cover; ?>');">
 
-                                <div class="flex -space-x-1 items-center ">
-                                    <img class="rounded-full w-7 h-7 shadow-lg border border-white" src="https://api.lorem.space/image/face?w=32&amp;h=32&amp;hash=zsrj8csk" alt="" srcset="">
-                                    <img class="rounded-full w-7 h-7 shadow-lg border border-white" src="https://api.lorem.space/image/face?w=32&amp;h=32&amp;hash=zsrj8cck" alt="" srcset="">
-                                    <img class="rounded-full w-7 h-7 shadow-lg border border-white" src="https://api.lorem.space/image/face?w=32&amp;h=32&amp;hash=zsfj8cck" alt="" srcset="">
-                                    <span class="pl-4 text-xs drop-shadow-lg">+27 Orang telah mengulas</span>
-                                </div>
+                                        <div class="flex -space-x-1 items-center ">
+                                            <img class="rounded-full w-7 h-7 shadow-lg border border-white" src="https://api.lorem.space/image/face?w=32&amp;h=32&amp;hash=zsrj8csk" alt="" srcset="">
+                                            <img class="rounded-full w-7 h-7 shadow-lg border border-white" src="https://api.lorem.space/image/face?w=32&amp;h=32&amp;hash=zsrj8cck" alt="" srcset="">
+                                            <img class="rounded-full w-7 h-7 shadow-lg border border-white" src="https://api.lorem.space/image/face?w=32&amp;h=32&amp;hash=zsfj8cck" alt="" srcset="">
+                                            <span class="pl-4 text-xs drop-shadow-lg">+27 Orang telah mengulas</span>
+                                        </div>
 
-                                <div class="bg-gradient-to-r from-black/30 to-transparent -mx-7 -mb-6 px-7 pb-6 pt-2">
-                                    <span class="uppercase text-3xl font-semibold drop-shadow-lg "><?= $article->title ?></span>
+                                        <div class="bg-gradient-to-r from-black/30 to-transparent -mx-7 -mb-6 px-7 pb-6 pt-2">
+                                            <span class="uppercase text-3xl font-semibold drop-shadow-lg "><?= $article->title ?></span>
 
-                                    <div class="inline">
+                                            <div class="inline">
 
-                                    </div>
-
-                                    <!-- Menampilkan Kategori Data dari Tabel Category yang berelasi dengan Tabel Article-->
-                                    <?php foreach ($categories as $category) : ?>
-                                        <?php if ($category->id == $article->kategori) : ?>
-                                            <div class="text-xs text-gray-200 mt-2">
-                                                <a href="#" class=""> <?= $category->name ?> </a>
                                             </div>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?>
 
-                                    <div class="mt-4 flex space-x-3 items-center">
-                                        <a href="<?= site_url('article/' . $article->slug) ?>" class="px-5 py-2.5 bg-red-600 hover:bg-red-700 rounded-lg text-xs inline-block dark:bg-slate-900 hover:dark:bg-slate-800">Lihat Review</a>
-                                        <a href="#" class="p-2.5 bg-gray-800/80 rounded-lg hover:bg-red-600 hover:dark:bg-slate-800">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
+                                            <!-- Menampilkan Kategori Data dari Tabel Category yang berelasi dengan Tabel Article-->
+                                            <?php foreach ($categories as $category) : ?>
+                                                <?php if ($category->id == $article->kategori) : ?>
+                                                    <div class="text-xs text-gray-200 mt-2">
+                                                        <a href="#" class=""> <?= $category->name ?> </a>
+                                                    </div>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+
+                                            <div class="mt-4 flex space-x-3 items-center">
+                                                <a href="<?= site_url('article/' . $article->slug) ?>" class="px-5 py-2.5 bg-red-600 hover:bg-red-700 rounded-lg text-xs inline-block dark:bg-slate-900 hover:dark:bg-slate-800">Lihat Review</a>
+                                                <a href="#" class="p-2.5 bg-gray-800/80 rounded-lg hover:bg-red-600 hover:dark:bg-slate-800">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            </div>
+                            <?php endforeach; ?>
                         <?php endforeach; ?>
                     </div>
 
@@ -103,7 +90,7 @@
             </section>
 
             <!-- Rekomendasi -->
-            <section class="mt-9">
+            <section class="">
                 <div class="flex items-center justify-between">
                     <span class="font-semibold text-white dark:text-white">Mungkin anda suka</span>
                     <div class="flex items-center space-x-2 fill-gray-500">

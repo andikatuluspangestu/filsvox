@@ -4,19 +4,32 @@ All notable changes to this project will be documented in this file.
 > [ v3.0.1 ] Unreleased - TBD :
 - Added  : You now have the option to view the latest movie reviews for the past week
 - Added  : Now you can see the most popular movie reviews on the explore page
+- Added  : You can see video trailers in each movie article, by pressing the "Watch Trailer" button
+- Added  : Contributors can now add video trailers from youtube
+- Added  : Now you can see the films that will be reviewed in the future ( Mobile )
+- Added  : The page not found design has been updated
 - Change : The Headlines feature may have been enabled for some contributors
 - Change : Complete overhaul of UIUX in explore page to improve user experience
 - Change : Changed the bottom navbar design style, floating to fixed bottom
-- Fixed : ``issue #1`` has been fixed
+- Change : Badge button on the main mobile-view has been removed due to an issue that can't be fixed now
+- Change : The "Upcoming" menu has been removed for the time being, as the feature is currently under development
+- Fixed : Fixed unreleased reviews appearing on search pages
+- Fixed : Headline does not appear on the main page of the website has been fixed
+- Fixed : Error when changing movie posting has been fixed
 - Fixed : Headline placement has been improved on mobile and desktop
+- Fixed : Modal popup from APIs information not showing has been fixed
+- Fixed : ``issue #1`` has been fixed
+- Fixed : ``issue #2`` has been fixed
+- Fixed : ``Issue #3`` has been fixed
+- Fixed : ``Issue #4`` has been fixed
 
 ---
 
 - ``Issue #1`` : The search form card in the mobile-view displays a light theme, when the device system uses a light color scheme
-- ``Issue #2`` : The genre badge button on the main mobile-view page is not working
+- ``Issue #2`` : For trailers only supports direct video links, does not support videos from youtube (due to copyright issues)
 - ``Issue #3`` : The search keyword for the title of the film must be case sensitive
 - ``Issue #4`` : Popular and favorite movie section still not showing correct information
-
+- ``Issue #5`` : The genre badge button on the main mobile-view page is not working
 
 > [ v3.0.0 ] Released - 11/11/2022 :
 - Added : User Register or Sign Up

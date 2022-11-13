@@ -16,7 +16,7 @@
       </div>
 
       <div class="bg-gradient-to-r from-black/30 to-transparent -mx-7 -mb-6 px-7 pb-6 pt-2">
-        <span class="uppercase text-2xl font-semibold drop-shadow-lg "><?= $article->title ?></span>
+        <span class="uppercase text-1xl font-semibold drop-shadow-lg "><?= $article->title ?></span>
 
         <!-- Menampilkan Kategori Data dari Tabel Category yang berelasi dengan Tabel Article-->
         <?php foreach ($categories as $category) : ?>

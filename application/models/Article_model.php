@@ -118,16 +118,13 @@ class Article_model extends CI_Model
     return $this->db->get();
   }
 
-  // Pencarian Data
+  // Pencarian Data yang memiliki keyword
   public function search($keyword)
   {
-    if (!$keyword) {
-      return null;
-    }
-    $this->db->like('title', $keyword);
-    $this->db->or_like('content', $keyword);
-    $query = $this->db->get($this->_table);
-    return $query->result();
+    $this->db->select("*");
+    $this->db->from("article");
+    $this->db->like('slug', $keyword);
+    return $this->db->get()->result();
   }
 
   // Pencarian Film berdasarkan judul, directors, writers, actors
@@ -168,6 +165,23 @@ class Article_model extends CI_Model
     return $query->result();
   }
 
+  // Cari artikel yang memiliki draft = TRUE
+  public function get_draft()
+  {
+    $this->db->where('draft', 'true');
+    $query = $this->db->get($this->_table);
+    return $query->result();
+  }
+
+  // Cek $slug artikel yang memiliki draft = TRUE
+  public function get_draft_by_slug($slug)
+  {
+    $this->db->where('slug', $slug);
+    $this->db->where('draft', 'true');
+    $query = $this->db->get($this->_table);
+    return $query->row();
+  }
+
   // Pencarian Film berdasarkan Kategori
   public function search_by_category($category_id)
   {
@@ -175,6 +189,15 @@ class Article_model extends CI_Model
       return null;
     }
     $this->db->where('kategori', $category_id);
+    $query = $this->db->get($this->_table);
+    return $query->result();
+  }
+
+  // Tampilkan artikel yang memiliki visitor terbanyak limit 3
+  public function get_most_viewed()
+  {
+    $this->db->order_by('visitor', 'DESC');
+    $this->db->limit(3);
     $query = $this->db->get($this->_table);
     return $query->result();
   }

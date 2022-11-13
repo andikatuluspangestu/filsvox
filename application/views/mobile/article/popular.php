@@ -21,7 +21,7 @@
 
     <!-- Badge Kategori -->
 
-    <div class="mt-20 mb-4">
+    <!-- <div class="mt-20 mb-4">
       <span class="text-sm font-medium mr-2 px-2.5 py-0.5 mb-5 rounded-2xl bg-red-700 text-gray-300">
         Semua
       </span>
@@ -37,7 +37,7 @@
       <span class="text-sm font-medium mr-2 px-2.5 py-0.5 mb-5 rounded-2xl bg-gray-700 text-gray-300">
         Action
       </span>
-    </div>
+    </div> -->
 
     <div class="flex flex-col mt-2">
       <?php foreach ($search_result as $article) : ?>
