@@ -63,7 +63,7 @@
 	</style>
 
 	<script>
-		// Jika pada media query smartphone arahkan ke google.com
+		// Jika pada media query smartphone arahkan halaman web
 		if (window.matchMedia("(max-width: 768px)").matches) {
 			var mobile = "<?= base_url('/mobile'); ?>"
 			window.location.replace(mobile);
