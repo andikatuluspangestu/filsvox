@@ -42,11 +42,11 @@ FILSVOX merupakan aplikasi review film berbasis Web App yang dibuat dengan mengg
 
 ### 🔍 Apa apakah yang baru?
 
-- Lihat perubahan [lebih lanjut.](../main/changelogs.md)
+- Lihat perubahan [lebih lanjut.](../development/changelogs.md)
 
 ### Informasi Akun
 
-- Administrator : admin - 12345678
+- Administrator : admin - admin
 
 ### 📝 Persyaratan Penggunaan
 

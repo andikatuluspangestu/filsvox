@@ -4,15 +4,32 @@
 
   <div id="myTabContent">
 
-    <div class="block m-2 p-6 max-w-sm rounded-lg border shadow-md bg-gray-800 border-gray-700">
+    <div class="fixed top-0 left-0 z-50 w-full bg-slate-900 shadow-lg">
+      <div class="flex items center justify-between w-full px-4 py-4 mx-auto text-white">
+        <!-- Icon SVG Back Arrow -->
+        <a href="<?= base_url('/mobile') ?>" class="flex items-center justify-center w-10 h-10 p-2 text-white transition duration-200 rounded-2xl hover:text-slate-400 focus:outline-none">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+        </a>
+        <!-- Tampilkan title di samping kanan Icon SVG -->
+        <span class="text-lg font-bold mr-auto pl-4 pt-1.5">
+          Kembali
+        </span>
+
+      </div>
+    </div>
+
+    <div class="block mt-20 p-6 max-w-sm rounded-lg shadow-md bg-gray-800">
       <div class="md:flex-shrink-0">
 
-        <!-- Jika tidak ada video maka tampilkan gambar -->
-        <?php if ($article->trailer == null) { ?>
-          <img class="w-full object-cover md:h-full md:w-48 rounded mb-4" src="<?php echo $article->cover ?>" alt="" style="height: 220px !important;">
-        <?php } else { ?>
-          <iframe class="h-48 w-full object-cover md:h-full md:w-48" src="<?php echo $article->trailer ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <?php } ?>
+        <?php if ($article->trailer == null) : ?>
+          <div class="modal-body">
+            <p class="text-gray-100">Trailer tidak tersedia untuk saat ini</p>
+          </div>
+        <?php else : ?>
+          <iframe class="rounded-2xl mb-5" width="100%" height="100%" src="https://www.youtube.com/embed/<?= $article->trailer ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <?php endif; ?>
 
       </div>
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">

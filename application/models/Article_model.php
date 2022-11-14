@@ -169,6 +169,16 @@ class Article_model extends CI_Model
   public function get_draft()
   {
     $this->db->where('draft', 'true');
+    $this->db->limit(3);
+    $query = $this->db->get($this->_table);
+    return $query->result();
+  }
+
+  // Tampilkan artikel yang memiliki visitor terbanyak limit 3
+  public function get_most_viewed()
+  {
+    $this->db->order_by('visitor', 'DESC');
+    $this->db->limit(3);
     $query = $this->db->get($this->_table);
     return $query->result();
   }
@@ -189,15 +199,6 @@ class Article_model extends CI_Model
       return null;
     }
     $this->db->where('kategori', $category_id);
-    $query = $this->db->get($this->_table);
-    return $query->result();
-  }
-
-  // Tampilkan artikel yang memiliki visitor terbanyak limit 3
-  public function get_most_viewed()
-  {
-    $this->db->order_by('visitor', 'DESC');
-    $this->db->limit(3);
     $query = $this->db->get($this->_table);
     return $query->result();
   }

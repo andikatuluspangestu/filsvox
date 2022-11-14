@@ -42,10 +42,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('/assets/favicon-32x32.png'); ?>">
   <link rel="icon" type="image/png" sizes="96x96" href="<?= base_url('/assets/favicon-96x96.png'); ?>">
   <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('/assets/favicon-16x16.png'); ?>">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="<?= base_url('/assets/ms-icon-144x144.png'); ?>">
   <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="web.webmanifest">
+  <script src="register.js"></script>
 
   <style>
     /* For Webkit-based browsers (Chrome, Safari and Opera) */

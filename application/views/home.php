@@ -6,7 +6,7 @@
         $this->load->view('partials/sidebar-kiri');
         ?>
 
-        <main class=" flex-1 py-10  px-5 sm:px-10 mt-12">
+        <main class=" flex-1 py-10  px-5 sm:px-10 mt-8">
 
             <!-- Responsive Header -->
             <?php
@@ -15,11 +15,6 @@
 
             <!-- Headline -->
             <section>
-                <nav class="flex space-x-6 text-gray-400 font-medium">
-                    <a href="#" class="hover:text-white dark:hover:text-white">Indonesia</a>
-                    <a href="#" class="text-gray-400 hover:text-white dark:text-white">Korea</a>
-                    <a href="#" class="hover:text-white dark:hover:text-white ">Japan</a>
-                </nav>
 
                 <!-- Headline -->
                 <div id="animation-carousel" class="relative" data-carousel="static">
@@ -181,6 +176,7 @@
                     </div>
                 </div>
             </section>
+
         </main>
 
         <!-- Sidebar Kanan -->
@@ -192,4 +188,5 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script src="register.js"></script>
 </body>

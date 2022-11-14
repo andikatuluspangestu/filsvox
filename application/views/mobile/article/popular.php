@@ -39,7 +39,7 @@
       </span>
     </div> -->
 
-    <div class="flex flex-col mt-2">
+    <div class="flex flex-col mt-20">
       <?php foreach ($search_result as $article) : ?>
 
         <a href="<?= site_url('article/read/' . $article->slug) ?>">

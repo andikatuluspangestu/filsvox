@@ -25,6 +25,9 @@ class Home extends CI_Controller
 		// ambil artikel yang memiliki visitor terbanyak
 		$data['popular'] = $this->article_model->get_most_viewed();
 
+		// ambil artikel yang memiliki status draft = true
+		$data['draft'] = $this->article_model->get_draft();
+
 		if (count($data['articles']) > 0) {
 			// kirim data artikel ke view
 			$this->load->view('partials/header');
