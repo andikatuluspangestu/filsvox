@@ -12,7 +12,7 @@ All notable changes to this project will be documented in this file.
 - Fixed : Back button blocking content on mobile
 - Fixed : The issue of the article and category list table not appearing, has been fixed
 - Fixed : Issues with the appearance of articles and categories that are not neat on the admin page
-- 
+ 
 > [ v3.0.1 ] Released - 13/11/2022 :
 - Added  : You now have the option to view the latest movie reviews for the past week
 - Added  : Now you can see the most popular movie reviews on the explore page
