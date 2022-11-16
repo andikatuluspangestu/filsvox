@@ -1,8 +1,12 @@
 ### **Changelogs**
 All notable changes to this project will be documented in this file.
 
-<<<<<<< HEAD
-> [ v3.0.2 ] Unreleased - TBD :
+> [ v3.0.2 ] HotFix - 16/11/2022 :
+- Fixed : mixing of secure and insecure content on a web page
+- Fixed : List user table content
+- Fixed : Minor bugs
+
+> [ v3.0.2 ] Released - 14/11/2022 :
 - Added : Now you can see a list of upcoming movie reviews on the Web
 - Added : Support Progresive Web App (PWA) for Android and iOS
 - Change : On the read review page on mobile, the card cover is replaced with a trailer card
@@ -14,8 +18,6 @@ All notable changes to this project will be documented in this file.
 - Fixed : The issue of the article and category list table not appearing, has been fixed
 - Fixed : Issues with the appearance of articles and categories that are not neat on the admin page
 
-=======
->>>>>>> a20a47080026295dfc5fe24cd5897e19156536cf
 > [ v3.0.1 ] Released - 13/11/2022 :
 - Added  : You now have the option to view the latest movie reviews for the past week
 - Added  : Now you can see the most popular movie reviews on the explore page
