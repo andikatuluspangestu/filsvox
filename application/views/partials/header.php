@@ -50,6 +50,9 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?= base_url('/assets/ms-icon-144x144.png'); ?>">
 	<meta name="theme-color" content="#ffffff">
+	<script>
+		navigator.serviceWorker.register("service-worker.js")
+	</script>
 
 	<style>
 		/* Sembunyikan btn-toggle di layar laptop */
