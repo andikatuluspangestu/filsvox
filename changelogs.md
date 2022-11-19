@@ -1,7 +1,7 @@
 ### **Changelogs**
 All notable changes to this project will be documented in this file.
 
-> [ v4.0.0 ] ```Stable``` Released - 19/11/2022 :
+> [ v4.0.0 ] `Stable` Released - 19/11/2022 :
 - Added : Now contributors can only view their own movie review articles
 - Added : Admins can now see the number of articles made by each contributor
 - Added : Contributors can now see their own review article statistics chart
@@ -17,7 +17,9 @@ All notable changes to this project will be documented in this file.
 - Fixed : List user table content is not responsive
 - Fixed : Search by category does not return what is expected when results are not available
 - Fixed : List of popular and upcoming movies on search result page
+- Fixed : The card on the movie page will display a light color scheme in dark mode
 - Fixed : Category padding on mobile view
+- Fixed : Title color on explore menu in mobile view
 - Fixed : Fix PWA not running properly
 - Fixed : Major bugs
 
