@@ -15,16 +15,25 @@ class User extends CI_Controller
   public function index()
   {
     $data['current_user'] = $this->auth_model->current_user();
+    $data['user'] = $this->user_model->get();
+    $this->load->model('article_model');
+
     // Jika current user memiliki role 1 maka tampilkan semua user
     if ($this->auth_model->current_user()->role == 1) {
       $data['title'] = 'Administrator';
-      $data['users'] = $this->user_model->get();
+
+      // Tampilkan jumlah artikel dalam setiap user
+      foreach ($data['user'] as $user) {
+        $user->article_count = $this->article_model->get_article_count($user->name);
+      }
+
       $this->load->view('admin/users/list_users', $data);
     } else {
       // Load dashboard
       redirect('admin/dashboard');
     }
   }
+
 
   // Simpan data user
   public function register()

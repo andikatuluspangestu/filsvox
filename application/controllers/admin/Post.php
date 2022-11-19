@@ -18,12 +18,17 @@ class Post extends CI_Controller
     $data['categories'] = $this->article_model->get_kategori();
     $data['current_user'] = $this->auth_model->current_user();
     $data['articles'] = $this->article_model->get();
-    if (count($data['articles']) <= 0) {
-      $this->load->view('admin/post/post_empty.php', $data);
+
+    if ($data['current_user']->role == '1') {
+      $data['articles'] = $this->article_model->get();
     } else {
-      $this->load->view('admin/post/post_list.php', $data);
+      // Jika current_user adalah author maka tampilkan artikel miliknya saja
+      $data['articles'] = $this->article_model->get_by_author($data['current_user']->name);
     }
+    $this->load->view('admin/post/post_list.php', $data);
   }
+
+
 
   // Tambah Artikel
   public function new()

@@ -6,7 +6,6 @@
       borderColor: 'rgba(153, 102, 255, 1)',
       tension: 0.1,
       label: 'Artikel',
-      // Ambil data artikel berdasarkan bulan di tabel article
       data: [<?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 1")->row()->jml; ?>,
         <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 2")->row()->jml; ?>,
         <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE MONTH(created_at) = 3")->row()->jml; ?>,
@@ -67,7 +66,7 @@
       borderWidth: 2,
       label: 'Artikel',
       hoverOffset: 4,
-      // jumlah artikel per kategori pada tabel article
+      // jumlah artikel per kategori pada tabel article yang ditulis oleh contributor current user
       data: [<?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE kategori = 1")->row()->jml; ?>,
         <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE kategori = 2")->row()->jml; ?>,
         <?php echo $this->db->query("SELECT COUNT(*) as jml FROM article WHERE kategori = 3")->row()->jml; ?>,
@@ -101,6 +100,3 @@
     data: dataCategory,
   });
 </script>
-
-
-

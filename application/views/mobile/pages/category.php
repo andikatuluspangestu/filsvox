@@ -12,7 +12,7 @@
 
   <!-- Max width container, center aligned, with some padding -->
   <div class="max-w-5xl mx-auto px-3 sm:px-6">
-    <div class="font-medium leading-7 text-center space-y-2 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 sm:space-y-0">
+    <div class="font-medium leading-7 text-center space-y-2 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 sm:space-y-0 mb-20">
       <?php foreach ($categories as $category) : ?>
         <a href="<?= base_url('/search/findbykategori/') . $category->id; ?>">
           <div class="text-white bg-slate-700 hover:bg-slate-900 mb-1 py-3 px-6 rounded">

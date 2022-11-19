@@ -12,6 +12,12 @@ class Article_model extends CI_Model
     return $query->result();
   }
 
+  // Tampilkan jumlah artikel dalam setiap user
+  public function get_article_count($data)
+  {
+    return $this->db->get_where('article', ['contributor' => $data])->num_rows();
+  }
+
   // Cek status Draft
   public function get_published($limit = null, $offset = null)
   {
@@ -85,6 +91,22 @@ class Article_model extends CI_Model
     return $this->db->count_all($this->_table);
   }
 
+  // Hitung jumlah artikel yang status draft false di tabel article dengan kondisi contributor = $data
+  public function count_published_user($data)
+  {
+    $this->db->where('contributor', $data);
+    $this->db->where('draft', 'FALSE');
+    return $this->db->count_all_results($this->_table);
+  }
+
+  // Hitung jumlah artikel yang status draft true di tabel article dengan kondisi contributor = $data
+  public function count_draft_user($data)
+  {
+    $this->db->where('contributor', $data);
+    $this->db->where('draft', 'TRUE');
+    return $this->db->count_all_results($this->_table);
+  }
+
   // Hitung jumlah artikel dengan status Draft
   public function count_draft()
   {
@@ -92,7 +114,7 @@ class Article_model extends CI_Model
   }
 
   // Hitung jumlah kategori di tabel kategori
-  public function count_kategori()
+  public function count_category()
   {
     return $this->db->count_all('category');
   }

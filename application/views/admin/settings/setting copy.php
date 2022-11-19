@@ -51,6 +51,8 @@
           Last Changed: <span class="text-gray"><?= $current_user->password_updated_at ?></span>
         </div>
       </div>
+      <!-- Kembali ke halaman sebelumnya -->
+
 
       <?php $this->load->view('admin/_partials/footer.php') ?>
     </div>

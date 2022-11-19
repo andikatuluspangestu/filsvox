@@ -42,7 +42,7 @@
     <div class="flex flex-col mt-20">
       <?php foreach ($search_result as $article) : ?>
 
-        <a href="<?= site_url('article/read/' . $article->slug) ?>">
+        <a href="<?= site_url('article/mobilevisitor/' . $article->slug) ?>">
           <ul class="mb-1 space-y-3">
             <li class="bg-slate-900 rounded-md p-2 flex shadow-lg">
               <img src="<?= $article->cover; ?>" class="w-12 h-12 rounded-md" alt="Cover" />

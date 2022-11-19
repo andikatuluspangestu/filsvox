@@ -12,12 +12,13 @@
             <th scope="col">Username</th>
             <th scope="col">Email</th>
             <th scope="col">Role</th>
+            <th scope="col">Post</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody class="table-group-divider text-white text-light">
           <?php $i = 1; ?>
-          <?php foreach ($users as $user) : ?>
+          <?php foreach ($user as $user) : ?>
             <tr>
               <th scope="row"><?= $i++ ?></th>
               <td><?= $user->name ?></td>
@@ -26,7 +27,6 @@
                 <?= $user->username ?>
               </td>
 
-              <!-- Tampilkan jumlah artikel draft pada setiap kategori -->
               <td>
                 <?= $user->email ?>
               </td>
@@ -38,6 +38,11 @@
                 <?php else : ?>
                   Kontributor
                 <?php endif; ?>
+              </td>
+
+              <td>
+                <!-- Tampilkan jumlah artikel dalam setiap user -->
+                <?= $user->article_count ?>
               </td>
 
               <td>

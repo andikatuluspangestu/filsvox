@@ -14,13 +14,13 @@
         </a>
         <!-- Tampilkan title di samping kanan Icon SVG -->
         <span class="text-lg font-bold mr-auto pl-4 pt-1.5">
-          Kembali
+          Back to Home
         </span>
 
       </div>
     </div>
 
-    <div class="block mt-20 p-6 max-w-sm rounded-lg shadow-md bg-gray-800">
+    <div class="block mt-20 p-6 bg-transparent">
       <div class="md:flex-shrink-0">
 
         <?php if ($article->trailer == null) : ?>
@@ -42,20 +42,30 @@
         <?php endif; ?>
       <?php endforeach; ?>
 
-      <h2 class="border-l-4 border-slate-400 text-2xl text-gray-400 pl-2 mt-8 mb-3">Alur Cerita</h2>
+      <!-- Director -->
+      <div class="film-desc text-gray-100 my-2">
+        <span>Director : <?= $article->directors ?> </span>
+        <br>
+        <span>Writer by <strong><?= $article->writers ?></strong></span>
+        <br>
+        <span>Actors : <?= $article->actors ?></span>
+        <br>
+        <span>Release : <?= $article->release_date ?></span>
+      </div>
+
+      <h2 class="border-l-4 border-slate-400 text-2xl text-gray-400 pl-2 mt-4 mb-3">Storyline</h2>
       <p class="mb-3 font-light text-left text-gray-400">
         <?= $article->content ? html_escape($article->content) : "No Content" ?>
       </p>
-    </div>
 
-    <!-- Ulasan -->
-    <div class="block m-2 p-6 max-w-sm rounded-lg border shadow-md bg-gray-800 border-gray-700">
-      <section id="tambah-ulasan">
-        <div class="m-3" id="disqus_thread">
-        </div>
-      </section>
-    </div>
+      <hr class="my-8 h-px border-0 bg-gray-700">
 
+      <!-- Ulasan -->
+      <h2 class="border-l-4 border-slate-400 text-2xl text-gray-400 pl-2 mt-8 mb-3">Review</h2>
+      <div class="mt-10" id="disqus_thread">
+      </div>
+
+    </div>
   </div>
 
   <!-- Javascript Flowbite CDN JS -->

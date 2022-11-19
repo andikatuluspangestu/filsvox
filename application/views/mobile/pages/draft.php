@@ -19,7 +19,7 @@
 
   <?php foreach ($draft as $article) : ?>
     <div class="flex flex-col mt-20">
-      <a href="<?= site_url('article/read/' . $article->slug) ?>">
+      <a id="getsoon" href="#">
         <ul class="mb-1 space-y-3">
           <li class="bg-slate-900 rounded-md p-2 flex shadow-lg">
             <img src="<?= $article->cover; ?>" class="w-12 h-12 rounded-md" alt="Cover" />
@@ -76,3 +76,11 @@
     </div>
   <?php endforeach; ?>
 </div>
+
+<script>
+  // Saat #getsoon di klik tampilkan alert dengan vanilla javascript
+  document.getElementById('getsoon').onclick = function() {
+    alert('Film ini akan datang, silahkan tunggu!');
+  }
+
+</script>

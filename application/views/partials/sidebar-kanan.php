@@ -14,7 +14,7 @@
             <div class="flex flex-col space-y-1">
               <span class="text-gray-400 dark:text-white font-semibold">
                 <!-- Limit alphabet 15 -->
-                <?= substr($pop->title, 0, 15) . ".."; ?>
+                <a href="<?= site_url('article/visitor/' . $pop->slug) ?>"><?= substr($pop->title, 0, 15) . ".."; ?></a>
               </span>
               <?php foreach ($categories as $category) : ?>
                 <?php if ($category->id == $pop->kategori) : ?>

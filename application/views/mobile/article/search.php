@@ -47,7 +47,7 @@
       <?php if ($search_result) : ?>
         <?php foreach ($search_result as $article) : ?>
 
-          <a href="<?= site_url('article/read/' . $article->slug) ?>">
+          <a href="<?= site_url('article/mobilevisitor/' . $article->slug) ?>">
             <ul class="mb-1 space-y-3">
               <li class="bg-slate-900 rounded-md p-2 flex shadow-lg">
                 <img src="<?= $article->cover; ?>" class="w-12 h-12 rounded-md" alt="Cover" />
@@ -104,7 +104,23 @@
         <?php endforeach ?>
       <?php else : ?>
         <?php if ($keyword) : ?>
-          <div style="height: 400px; color: white;">
+          <!-- Fixed Mobile Top Navbar Tailwind CSS -->
+          <div class="fixed top-0 left-0 z-50 w-full bg-slate-900 shadow-lg">
+            <div class="flex items center justify-between w-full px-4 py-4 mx-auto text-white">
+              <!-- Icon SVG Back Arrow -->
+              <a href="<?= base_url('/mobile') ?>" class="flex items-center justify-center w-10 h-10 p-2 text-white transition duration-200 rounded-2xl hover:text-slate-400 focus:outline-none">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+              </a>
+              <!-- Tampilkan title di samping kanan Icon SVG -->
+              <span class="text-lg font-bold mr-auto pl-4 pt-1.5">
+                Search Result
+              </span>
+
+            </div>
+          </div>
+          <div class="mt-8" style="height: 400px; color: white;">
             <h1>Tidak ada yang ditemukan</h1>
             <p>Coba dengan kata kunci yang lain</p>
           </div>

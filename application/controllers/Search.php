@@ -13,6 +13,12 @@ class Search extends CI_Controller
   public function index()
   {
 
+    // ambil artikel yang memiliki visitor terbanyak
+    $data['popular'] = $this->article_model->get_most_viewed();
+
+    // ambil artikel yang memiliki status draft = true
+    $data['draft'] = $this->article_model->get_draft();
+
     $data['categories'] = $this->article_model->get_kategori();
     $data['articles'] = $this->article_model->get_published();
     $data['keyword'] = $this->input->get('keyword');
@@ -56,6 +62,12 @@ class Search extends CI_Controller
     // Ambil semua film
     $data['articles'] = $this->article_model->get_published();
 
+    // ambil artikel yang memiliki visitor terbanyak
+    $data['popular'] = $this->article_model->get_most_viewed();
+
+    // ambil artikel yang memiliki status draft = true
+    $data['draft'] = $this->article_model->get_draft();
+
     // Cari film berdasarkan kategori melalui Model
     $data['search_result'] = $this->article_model->search_by_category($category_id);
 
@@ -82,6 +94,12 @@ class Search extends CI_Controller
     // Ambil semua film
     $data['articles'] = $this->article_model->get_published();
 
+    // ambil artikel yang memiliki visitor terbanyak
+    $data['popular'] = $this->article_model->get_most_viewed();
+
+    // ambil artikel yang memiliki status draft = true
+    $data['draft'] = $this->article_model->get_draft();
+
     // Cari film berdasarkan kategori melalui Model
     $data['search_result'] = $this->article_model->search_by_category($category_id);
 
@@ -91,11 +109,8 @@ class Search extends CI_Controller
       $this->load->view('mobile/article/search', $data);
       $this->load->view('mobile/partials/footer');
     } else {
-      // kirim data artikel ke view
-      $this->load->view('partials/header');
-      $this->load->view('partials/navbar');
-      $this->load->view('artikel/not_found', $data);
-      $this->load->view('partials/footer');
+      // Redirect
+      redirect('mobile/');
     }
   }
 
@@ -120,6 +135,12 @@ class Search extends CI_Controller
     // Tampilkan artikel yang memiliki visitor lebih dari 100
     $data['search_result'] = $this->article_model->get_popular();
 
+    // ambil artikel yang memiliki visitor terbanyak
+    $data['popular'] = $this->article_model->get_most_viewed();
+
+    // ambil artikel yang memiliki status draft = true
+    $data['draft'] = $this->article_model->get_draft();
+
     // Title
     $data['title'] = 'Popular Articles';
 
@@ -139,6 +160,20 @@ class Search extends CI_Controller
 
     // Title
     $data['title'] = 'Latest Articles';
+
+    $this->load->view('mobile/partials/header');
+    $this->load->view('mobile/article/popular', $data);
+    $this->load->view('mobile/partials/footer');
+  }
+
+  // Tampilkan semua artikel yang memiliki status draft = false
+  public function allmovies()
+  {
+    // Tampilkan artikel yang memiliki visitor lebih dari 100
+    $data['search_result'] = $this->article_model->get_published();
+
+    // Title
+    $data['title'] = 'All Movies Articles';
 
     $this->load->view('mobile/partials/header');
     $this->load->view('mobile/article/popular', $data);

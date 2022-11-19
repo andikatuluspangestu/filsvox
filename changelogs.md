@@ -1,10 +1,24 @@
 ### **Changelogs**
 All notable changes to this project will be documented in this file.
 
-> [ v3.0.2 ] HotFix - 16/11/2022 :
+> [ v4.0.0 ] ```Stable``` Released - 19/11/2022 :
+- Added : Now contributors can only view their own movie review articles
+- Added : Admins can now see the number of articles made by each contributor
+- Added : Contributors can now see their own review article statistics chart
+- Added : Now contributors can see the number of published review articles, and their own drafts
+- Added : Star rating has been added in the mobile view
+- Added : Now if user clicks on upcoming movie it will show alert message
+- Added : Now users can view all film review articles on the explore menu
+- Fixed : The background color on the add contributor form has been fixed
+- Fixed : The layout margins on the review article reading page are inconsistent
+- Fixed : Disqus Form is not responsive
+- Fixed : Now you can click on popular movie titles to see reviews
 - Fixed : mixing of secure and insecure content on a web page
-- Fixed : List user table content
-- Fixed : Minor bugs
+- Fixed : List user table content is not responsive
+- Fixed : Search by category does not return what is expected when results are not available
+- Fixed : List of popular and upcoming movies on search result page
+- Fixed : Category padding on mobile view
+- Fixed : Major bugs
 
 > [ v3.0.2 ] Released - 14/11/2022 :
 - Added : Now you can see a list of upcoming movie reviews on the Web

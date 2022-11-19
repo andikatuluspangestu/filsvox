@@ -27,6 +27,7 @@
         <span class="sr-only">Next</span>
       </span>
     </button>
+
   </div>
 
   <!-- Search -->
@@ -74,8 +75,10 @@
           <div class=" h-full w-full lg:h-48 lg:w-48   lg:mb-0 mb-3">
             <img src="<?= $article->cover; ?>" alt="Just a flower" class="w-full object-cover h-48 rounded-2xl">
           </div>
+
           <div class="flex-auto ml-3 justify-evenly py-2">
             <div class="flex flex-wrap ">
+
               <?php foreach ($categories as $category) : ?>
                 <?php if ($category->id == $article->kategori) : ?>
                   <div class="text-bold w-full flex-none text-xs text-red-700 font-medium ">
@@ -85,12 +88,64 @@
               <?php endforeach; ?>
 
               <h2 class="flex-auto text-lg font-medium text-white"><?= $article->title; ?></h2>
+
+              <div class="flex items-center mt-2.5 mb-5">
+
+                <!-- Jika visitor lebih dari 5 tampilkan "Bad", dan jika visitor lebih dari 10 tampilkan "Not Bad", dan jika visitor lebih dari 20 tampilkan "Recommended" -->
+                <?php if ($article->visitor <= 20) : ?>
+                  <!-- Loop -->
+                  <?php for ($i = 0; $i < 1; $i++) : ?>
+                    <!-- Load view bintang -->
+                    <?php
+                    $this->load->view('bintang.php');
+                    ?>
+                  <?php endfor; ?>
+
+                <?php elseif ($article->visitor <= 40) : ?>
+                  <!-- Loop -->
+                  <?php for ($i = 0; $i < 2; $i++) : ?>
+                    <!-- Load view bintang -->
+                    <?php
+                    $this->load->view('bintang.php');
+                    ?>
+                  <?php endfor; ?>
+                <?php elseif ($article->visitor <= 60) : ?>
+                  <!-- Loop -->
+                  <?php for ($i = 0; $i < 3; $i++) : ?>
+                    <!-- Load view bintang -->
+                    <?php
+                    $this->load->view('bintang.php');
+                    ?>
+                  <?php endfor; ?>
+                <?php elseif ($article->visitor <= 80) : ?>
+                  <!-- Loop -->
+                  <?php for ($i = 0; $i < 4; $i++) : ?>
+                    <!-- Load view bintang -->
+                    <?php
+                    $this->load->view('bintang.php');
+                    ?>
+                  <?php endfor; ?>
+                <?php elseif ($article->visitor <= 500) : ?>
+                  <!-- Loop -->
+                  <?php for ($i = 0; $i < 5; $i++) : ?>
+                    <!-- Load view bintang -->
+                    <?php
+                    $this->load->view('bintang.php');
+                    ?>
+                  <?php endfor; ?>
+                <?php endif; ?>
+
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
+                  <?= $article->visitor; ?> Views
+                </span>
+              </div>
+
             </div>
             <p class="mt-3"></p>
             <div class="flex space-x-3 text-sm font-medium">
               <div class="flex-auto flex space-x-3">
               </div>
-              <a href="<?= site_url('article/read/' . $article->slug) ?>">
+              <a href="<?= site_url('article/mobilevisitor/' . $article->slug) ?>">
                 <button class="mb-2 md:mb-0 bg-red-700 px-5 py-2 shadow-sm tracking-wider text-white rounded hover:bg-red-800" type="button" aria-label="like">Review</button>
               </a>
             </div>

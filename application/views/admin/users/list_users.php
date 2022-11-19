@@ -88,33 +88,33 @@
                     <div class="flex mb-4">
                       <div class="w-1/2 mr-1">
                         <label class="block text-white text-sm font-bold mb-2" for="first_name">Nama Lengkap</label>
-                        <input class="ext-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400" id="first_name" type="text" placeholder="Masukan nama lengkap" name="name">
+                        <input class="text-sm text-gray-200 rounded-lg w-full bg-gray-700 border px-3 border-gray-700 focus:outline-none focus:border-purple-400" id="first_name" type="text" placeholder="Masukan nama lengkap" name="name">
                       </div>
                       <div class="w-1/2 ml-1">
                         <label class="block text-white text-sm font-bold mb-2" for="last_name">Username</label>
-                        <input class="ext-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400" id="last_name" type="text" placeholder="Ketik username kamu" name="username">
+                        <input class="text-sm text-gray-200 rounded-lg w-full bg-gray-700 border px-3 border-gray-700 focus:outline-none focus:border-purple-400" id="last_name" type="text" placeholder="Ketik username kamu" name="username">
                       </div>
                     </div>
 
                     <div class="mb-6">
                       <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email</label>
-                      <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="masukan email" required="">
+                      <input type="email" id="email" name="email" class="border text-gray-900 text-sm px-3 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Masukan email" required="">
                     </div>
 
                     <div class="flex mb-4">
                       <div class="w-1/2 mr-1">
                         <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>
-                        <input type="password" id="password" name="password1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" placeholder="*****">
+                        <input type="password" id="password" name="password1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-3 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" placeholder="*****">
                       </div>
                       <div class="w-1/2 ml-1">
                         <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ulangi Password</label>
-                        <input type="password" id="password" name="password2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" placeholder="*****">
+                        <input type="password" id="password" name="password2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg px-3 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" placeholder="*****">
                       </div>
                     </div>
 
                     <div class="mb-4">
                       <label class="block text-white text-sm font-bold mb-2" for="role">Role</label>
-                      <select class="ext-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400" id="role" name="role">
+                      <select class="ext-sm text-gray-200 py-2 px-3 rounded-lg w-full bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-400" id="role" name="role">
                         <option value="1">Admin</option>
                         <option value="2">Kontributor</option>
                       </select>

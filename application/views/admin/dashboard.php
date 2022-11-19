@@ -32,7 +32,15 @@
                   Publish
                 </div>
                 <div class="text-2xl text-gray-100 font-medium leading-8 mt-5">
-                  <?= $article_count ?>
+
+                  <?php if ($current_user->role == 1) : ?>
+                    <!-- Tampilkan jumlah semua artikel -->
+                    <?= $article_count ?>
+                  <?php else : ?>
+                    <!-- Tampilkan jumlah artikel dengan kondisi contributor == $current_user->name -->
+                    <?= $count_published_user ?>
+                  <?php endif; ?>
+
                 </div>
                 <div class="text-sm text-gray-500">Artikel Terpublikasi</div>
               </div>
@@ -50,7 +58,15 @@
                 <div class="flex justify-between items-center ">
                   <i class="fab fa-behance text-xl text-gray-400"></i>
                 </div>
-                <div class="text-2xl text-gray-100 font-medium leading-8 mt-5"><?= $draft_count ?></div>
+                <div class="text-2xl text-gray-100 font-medium leading-8 mt-5">
+                  <?php if ($current_user->role == 1) : ?>
+                    <!-- Tampilkan jumlah semua artikel -->
+                    <?= $draft_count ?>
+                  <?php else : ?>
+                    <!-- Tampilkan jumlah artikel dengan kondisi contributor == $current_user->name -->
+                    <?= $count_draft_user ?>
+                  <?php endif; ?>
+                </div>
                 <div class="text-sm text-gray-500">Artikel dalam draft</div>
               </div>
             </div>
@@ -76,19 +92,36 @@
 
           <div class="mt-4 w-full grid grid-cols-1 md:grid-cols-4 xl:grid-cols-2 gap-2">
 
-            <div class="bg-gray-800 shadow rounded-2xl mb-4 p-4 sm:p-6 h-full">
-              <span class="leading-none text-center mb-5 block text-gray-300">Artikel per-bulan <span class="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"><?= date('Y'); ?></span></span>
-              <div>
-                <canvas class="text-light" id="bymonth"></canvas>
+            <!-- Tampilkan jika current_user-role adalah 1 -->
+            <?php if ($current_user->role == 1) : ?>
+              <div class="bg-gray-800 shadow rounded-2xl mb-4 p-4 sm:p-6 h-full">
+                <span class="leading-none text-center mb-5 block text-gray-300">Artikel per-bulan <span class="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"><?= date('Y'); ?></span></span>
+                <div>
+                  <canvas class="text-light" id="bymonth"></canvas>
+                </div>
               </div>
-            </div>
 
-            <div class="bg-gray-800 shadow rounded-2xl mb-4 p-4 sm:p-6 h-full">
-              <div>
-                <span class="leading-none text-center mb-5 block text-gray-300">Artikel per-kategori</span>
-                <canvas class="text-light" id="bycategory"></canvas>
+              <div class="bg-gray-800 shadow rounded-2xl mb-4 p-4 sm:p-6 h-full">
+                <div>
+                  <span class="leading-none text-center mb-5 block text-gray-300">Artikel per-kategori</span>
+                  <canvas class="text-light" id="bycategory"></canvas>
+                </div>
               </div>
-            </div>
+            <?php else : ?>
+              <div class="bg-gray-800 shadow rounded-2xl mb-4 p-4 sm:p-6 h-full">
+                <span class="leading-none text-center mb-5 block text-gray-300">Artikel per-bulan <span class="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"><?= date('Y'); ?></span></span>
+                <div>
+                  <canvas class="text-light" id="bymonthuser"></canvas>
+                </div>
+              </div>
+
+              <div class="bg-gray-800 shadow rounded-2xl mb-4 p-4 sm:p-6 h-full">
+                <div>
+                  <span class="leading-none text-center mb-5 block text-gray-300">Artikel per-kategori</span>
+                  <canvas class="text-light" id="bycategoryuser"></canvas>
+                </div>
+              </div>
+            <?php endif; ?>
           </div>
         </div>
       </div>
@@ -99,7 +132,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
 
   <!-- Load view chart.php di folder admin -->
-  <?php $this->load->view('admin/statistics/chart.php'); ?>
+  <?php $this->load->view('admin/statistics/admin_chart.php'); ?>
+  <?php $this->load->view('admin/statistics/user_chart.php'); ?>
 
 </body>
 

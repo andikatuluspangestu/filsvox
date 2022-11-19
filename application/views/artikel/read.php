@@ -1,16 +1,16 @@
 <body class="font-montserrat text-sm bg-slate-900 dark:bg-slate-900 ">
   <div class="flex min-h-screen  2xl:max-w-screen-2xl 2xl:mx-auto 2xl:border-x-2 2xl:border-gray-200 dark:2xl:border-zinc-700 ">
 
-    <!-- Left Sidebar -->
+    <!-- Sidebar Kiri -->
     <?php
-    $this->load->view('partials/sidebar-kiri');
+      $this->load->view('partials/sidebar-kiri');
     ?>
 
     <main class=" flex-1 py-10  px-5 sm:px-10 ">
 
       <!-- Responsive Header -->
       <?php
-      $this->load->view('partials/responsive.php');
+        $this->load->view('partials/responsive.php');
       ?>
 
       <section id="deskripsi">

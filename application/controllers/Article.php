@@ -92,16 +92,21 @@ class Article extends CI_Controller
     }
   }
 
-  // Function to count the number of visitors per article
-  function add_count($slug)
+  // Function visitor untuk menambah angka 1 setiap kali artikel dibuka berdasarkan id artikel
+  public function visitor($slug)
   {
-    $this->load->helper('cookie');
-    $check_visitor = $this->input->cookie(urldecode($slug), FALSE);
-    $ip = $this->input->ip_address();
-    if ($check_visitor == false) {
-      $cookie = array("name" => urldecode($slug), "value" => "$ip", "expire" => time() + 7200, "secure" => false);
-      $this->input->set_cookie($cookie);
-      $this->article_model->update_counter(urldecode($slug));
-    }
+    $this->article_model->update_counter($slug);
+
+    // Redirect
+    redirect('article/show/' . $slug);
   }
+
+  public function mobilevisitor($slug)
+  {
+    $this->article_model->update_counter($slug);
+
+    // Redirect
+    redirect('article/read/' . $slug);
+  }
+
 }

@@ -39,7 +39,6 @@
                     </a>
                     <div class="flex items-center mt-2.5 mb-5">
 
-                      <!-- Jika visitor lebih dari 5 tampilkan "Bad", dan jika visitor lebih dari 10 tampilkan "Not Bad", dan jika visitor lebih dari 20 tampilkan "Recommended" -->
                       <?php if ($article->visitor <= 20) : ?>
                         <!-- Loop -->
                         <?php for ($i = 0; $i < 1; $i++) : ?>
@@ -88,8 +87,8 @@
                       </span>
                     </div>
                     <div class="flex justify-between items-center ">
-
-                      <a href="<?= site_url('article/' . $article->slug) ?>" class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-sm text-sm px-2 py-1 text-center">Review</a>
+                      <!-- Ketika tombol di klik maka akan bertambah satu angka pada database -->
+                      <a id="click" href="<?= site_url('article/visitor/' . $article->slug) ?>" class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-sm text-sm px-2 py-1 text-center">Review</a>
                     </div>
                   </div>
                 </div>

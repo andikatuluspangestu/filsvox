@@ -29,7 +29,7 @@
 	<meta property="og:locale" content="id_ID" />
 	<meta property="og:locale:alternate" content="en_US" />
 	<meta name="description" content="Tempat untuk melihat berbagai ulasan film menarik dan terbaru">
-	<meta name"keyword" content="film, movie, review, ulasanfilm, imdb, serialtv, rakor, drama">
+	<meta name"keyword" content="Filsvox - Get Movies Review, filsvox, film, movie, review, ulasanfilm, imdb, serialtv, rakor, drama">
 
 	<!-- PWA Initialize -->
 	<link rel="manifest" href="web.webmanifest">

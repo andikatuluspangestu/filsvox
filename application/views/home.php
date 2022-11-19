@@ -165,8 +165,8 @@
                                             </span>
                                         </div>
                                         <div class="flex justify-between items-center ">
-
-                                            <a href="<?= site_url('article/' . $article->slug) ?>" class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-sm text-sm px-2 py-1 text-center">Review</a>
+                                            <!-- Ketika tombol di klik maka akan bertambah satu angka pada database -->
+                                            <a id="click" href="<?= site_url('article/visitor/' . $article->slug) ?>" class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-sm text-sm px-2 py-1 text-center">Review</a>
                                         </div>
                                     </div>
                                 </div>
@@ -186,6 +186,7 @@
 
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     <script src="register.js"></script>
