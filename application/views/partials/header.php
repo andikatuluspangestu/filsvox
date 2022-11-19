@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="cupcake">
+<html lang="id_ID" data-theme="cupcake">
 
 <head>
 	<meta charset="UTF-8">
@@ -27,7 +27,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://filsvox.my.id/" />
 	<meta property="og:locale" content="id_ID" />
-	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:locale:alternate" content="id_ID" />
 	<meta name="description" content="Tempat untuk melihat berbagai ulasan film menarik dan terbaru">
 	<meta name"keyword" content="Filsvox - Get Movies Review, filsvox, film, movie, review, ulasanfilm, imdb, serialtv, rakor, drama">
 

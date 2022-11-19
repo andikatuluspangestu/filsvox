@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - Fixed : Search by category does not return what is expected when results are not available
 - Fixed : List of popular and upcoming movies on search result page
 - Fixed : Category padding on mobile view
+- Fixed : Fix PWA not running properly
 - Fixed : Major bugs
 
 > [ v3.0.2 ] Released - 14/11/2022 :

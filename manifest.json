@@ -1,41 +1,22 @@
 {
- "name": "Filsvox",
- "icons": [
-  {
-   "src": "\/assets/android-icon-36x36.png",
-   "sizes": "36x36",
-   "type": "image\/png",
-   "density": "0.75"
-  },
-  {
-   "src": "\/assets/android-icon-48x48.png",
-   "sizes": "48x48",
-   "type": "image\/png",
-   "density": "1.0"
-  },
-  {
-   "src": "\/assets/android-icon-72x72.png",
-   "sizes": "72x72",
-   "type": "image\/png",
-   "density": "1.5"
-  },
-  {
-   "src": "\/assets/android-icon-96x96.png",
-   "sizes": "96x96",
-   "type": "image\/png",
-   "density": "2.0"
-  },
-  {
-   "src": "\/assets/android-icon-144x144.png",
-   "sizes": "144x144",
-   "type": "image\/png",
-   "density": "3.0"
-  },
-  {
-   "src": "\//assets/-icon-192x192.png",
-   "sizes": "192x192",
-   "type": "image\/png",
-   "density": "4.0"
-  }
- ]
+  "name": "FILSVOX",
+  "short_name": "FLV",
+  "description": "Get Movies Review",
+  "icons": [
+    {
+      "src": "/assets/images/icon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#141487",
+  "background_color": "#141460",
+  "dir": "auto",
+  "lang": "en",
+  "orientation": "portrait",
+  "categories": [
+    "entertainment"
+  ]
 }

@@ -9,7 +9,7 @@
       <!-- Tampilkan Film terpopular -->
       <?php foreach ($popular as $pop) : ?>
         <li class="flex space-x-3 bg-slate-800 p-3 rounded-lg">
-          <img src="<?= $pop->cover; ?>" class="object-cover w-1/3 h-14 rounded-md" alt="">
+          <img src="<?= $pop->cover; ?>" class="object-cover w-1/3 h-14 rounded-md" alt="<?= $pop->title; ?>">
           <div class="flex flex-col justify-between  ">
             <div class="flex flex-col space-y-1">
               <span class="text-gray-400 dark:text-white font-semibold">
@@ -45,7 +45,7 @@
 
       <?php foreach ($draft as $draft) : ?>
         <li class="flex space-x-3 bg-slate-800 p-3 rounded-lg">
-          <img src="<?= $draft->cover; ?>" class="object-cover w-1/3 h-14 rounded-md" alt="">
+          <img src="<?= $draft->cover; ?>" class="object-cover w-1/3 h-14 rounded-md" alt="<?= $draft->title; ?>">
           <div class="flex flex-col justify-between  ">
             <div class="flex flex-col space-y-1">
               <span class="text-gray-400 dark:text-white font-semibold">

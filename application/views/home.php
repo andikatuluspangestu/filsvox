@@ -33,7 +33,7 @@
                                         </div>
 
                                         <div class="bg-gradient-to-r from-black/30 to-transparent -mx-7 -mb-6 px-7 pb-6 pt-2">
-                                            <span class="uppercase text-3xl font-semibold drop-shadow-lg "><?= $article->title ?></span>
+                                            <h1 class="uppercase text-3xl font-semibold drop-shadow-lg "><?= $article->title ?></h1>
 
                                             <div class="inline">
 
@@ -107,12 +107,12 @@
                                 <!-- Items Film -->
                                 <div class="w-full max-w-sm rounded-lg shadow-md bg-slate-800  dark:border-gray-700">
                                     <a href="#">
-                                        <img class="object-cover h-48 w-96 rounded-t-lg justify-between border-b-2 border-b-white-600" src="<?= $article->cover; ?>" alt="product image">
+                                        <img class="object-cover h-48 w-96 rounded-t-lg justify-between border-b-2 border-b-white-600" src="<?= $article->cover; ?>" alt="<?= $article->title; ?>">
                                     </a>
 
                                     <div class="px-5 pb-5">
                                         <a href="#">
-                                            <h5 class="pt-5 font-semibold tracking-tight text-white dark:text-white"><?= $article->title; ?></h5>
+                                            <h2 class="pt-5 font-semibold tracking-tight text-white dark:text-white"><?= $article->title; ?></h2>
                                         </a>
                                         <div class="flex items-center mt-2.5 mb-5">
 
@@ -164,6 +164,7 @@
                                                 <?= $article->visitor; ?> Views
                                             </span>
                                         </div>
+
                                         <div class="flex justify-between items-center ">
                                             <!-- Ketika tombol di klik maka akan bertambah satu angka pada database -->
                                             <a id="click" href="<?= site_url('article/visitor/' . $article->slug) ?>" class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-sm text-sm px-2 py-1 text-center">Review</a>

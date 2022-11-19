@@ -30,7 +30,7 @@
                 <!-- Items Film -->
                 <div class="w-full max-w-sm rounded-lg shadow-md bg-slate-800  dark:border-gray-700">
                   <a href="#">
-                    <img class="object-cover h-48 w-96 rounded-t-lg justify-between border-b-2 border-b-white-600" src="<?= $article->cover; ?>" alt="product image">
+                    <img class="object-cover h-48 w-96 rounded-t-lg justify-between border-b-2 border-b-white-600" src="<?= $article->cover; ?>" alt="<?= $article->title; ?>">
                   </a>
 
                   <div class="px-5 pb-5">
