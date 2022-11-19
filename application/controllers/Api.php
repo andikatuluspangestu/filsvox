@@ -29,6 +29,8 @@ class Api extends CI_Controller
       $response[] = array(
         "id" => $hasil->id,
         "title" => $hasil->title,
+        "content" => $hasil->content,
+        "created_at" => $hasil->created_at,
         "slug" => $hasil->slug,
       );
     }

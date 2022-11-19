@@ -1,0 +1,16 @@
+{
+  "name": "FILSVOX",
+  "short_name": "FLV",
+  "description": "Get Movies Review",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "darkblue",
+  "background_color": "darkblue"
+}

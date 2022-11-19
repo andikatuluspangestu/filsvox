@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="cupcake">
+<html lang="id_ID" data-theme="cupcake">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-	<!-- Page SEO -->
+	<!-- Title -->
 	<title>Filsvox | Get Movies Review</title>
 
 	<!-- App Vendors -->
@@ -13,24 +14,62 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="<?= base_url(); ?>/assets/css/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3163/3163508.png" type="image/x-icon">
+	<link rel="shortcut icon" href="<?= base_url('/assets/images/icon.png'); ?>" type="image/x-icon">
 
-	// composer autoload
-	require __DIR__ . '/vendor/autoload.php';
+	<!-- Meta Property -->
+	<meta property="og:site_name" content="FILSVOX - Get Movies Review">
+	<meta property="og:title" content="FILSVOX - Get Movies Review" />
+	<meta property="og:description" content="Tempat untuk melihat berbagai ulasan film menarik dan terbaru" />
+	<meta property="og:image" itemprop="image" content="<?= base_url('/assets/images/thumbnail.png'); ?>">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://filsvox.my.id/" />
+	<meta property="og:locale" content="id_ID" />
+	<meta property="og:locale:alternate" content="id_ID" />
+	<meta name="description" content="Tempat untuk melihat berbagai ulasan film menarik dan terbaru">
+	<meta name"keyword" content="Filsvox - Get Movies Review, filsvox, film, movie, review, ulasanfilm, imdb, serialtv, rakor, drama">
 
-	// if you are not using composer
-	// require_once 'path/to/algoliasearch.php';
+	<!-- PWA Initialize -->
+	<link rel="manifest" href="web.webmanifest">
+	<link rel="apple-touch-icon" sizes="57x57" href="<?= base_url('/assets/apple-icon-57x57.png'); ?>">
+	<link rel="apple-touch-icon" sizes="60x60" href="<?= base_url('/assets/apple-icon-60x60.png'); ?>">
+	<link rel="apple-touch-icon" sizes="72x72" href="<?= base_url('/assets/apple-icon-72x72.png'); ?>">
+	<link rel="apple-touch-icon" sizes="76x76" href="<?= base_url('/assets/apple-icon-76x76.png'); ?>">
+	<link rel="apple-touch-icon" sizes="114x114" href="<?= base_url('/assets/apple-icon-114x114.png'); ?>">
+	<link rel="apple-touch-icon" sizes="120x120" href="<?= base_url('/assets/apple-icon-120x120.png'); ?>">
+	<link rel="apple-touch-icon" sizes="144x144" href="<?= base_url('/assets/apple-icon-144x144.png'); ?>">
+	<link rel="apple-touch-icon" sizes="152x152" href="<?= base_url('/assets/apple-icon-152x152.png'); ?>">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('/assets/apple-icon-180x180.png'); ?>">
+	<link rel="icon" type="image/png" sizes="192x192" href="<?= base_url('/assets/android-icon-192x192.png'); ?>">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('/assets/favicon-32x32.png'); ?>">
+	<link rel="icon" type="image/png" sizes="96x96" href="<?= base_url('/assets/favicon-96x96.png'); ?>">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('/assets/favicon-16x16.png'); ?>">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="<?= base_url('/assets/ms-icon-144x144.png'); ?>">
+	<meta name="theme-color" content="#ffffff">
+	<script>
+		navigator.serviceWorker.register("service-worker.js")
+	</script>
 
-	$client = \Algolia\AlgoliaSearch\SearchClient::create(
-	'YourApplicationID',
-	'YourWriteAPIKey'
-	);
+	<style>
+		/* Sembunyikan btn-toggle di layar laptop */
 
-	$index = $client->initIndex('your_index_name');
+		@media (min-width: 1024px) {
+			#btn-toggle {
+				display: none;
+			}
+		}
+	</style>
+
+	<script>
+		// Jika pada media query smartphone arahkan halaman web
+		if (window.matchMedia("(max-width: 768px)").matches) {
+			var mobile = "<?= base_url('/mobile'); ?>"
+			window.location.replace(mobile);
+		}
+	</script>
 
 </head>

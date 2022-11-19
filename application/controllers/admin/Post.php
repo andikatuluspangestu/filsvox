@@ -18,12 +18,17 @@ class Post extends CI_Controller
     $data['categories'] = $this->article_model->get_kategori();
     $data['current_user'] = $this->auth_model->current_user();
     $data['articles'] = $this->article_model->get();
-    if (count($data['articles']) <= 0) {
-      $this->load->view('admin/post/post_empty.php', $data);
+
+    if ($data['current_user']->role == '1') {
+      $data['articles'] = $this->article_model->get();
     } else {
-      $this->load->view('admin/post/post_list.php', $data);
+      // Jika current_user adalah author maka tampilkan artikel miliknya saja
+      $data['articles'] = $this->article_model->get_by_author($data['current_user']->name);
     }
+    $this->load->view('admin/post/post_list.php', $data);
   }
+
+
 
   // Tambah Artikel
   public function new()
@@ -42,14 +47,19 @@ class Post extends CI_Controller
       }
 
       $slug = url_title($this->input->post('title'), 'dash', TRUE);
+      $newSlug = str_replace('-', '', $slug);
+
+      $youtube_url = $this->input->post('trailer');
+      $youtube_id = substr($youtube_url, -11);
 
       $article = [
         'id' => $this->input->post('id'),
-        'title' => $this->input->post('title'),
+        'title' => ucwords($this->input->post('title')),
+        'contributor' => $this->input->post('contributor'),
         'cover' => $this->input->post('cover'),
-        'trailer' => $this->input->post('trailer'),
+        'trailer' => $youtube_id,
         'kategori' => $this->input->post('kategori'),
-        'slug' => $slug,
+        'slug' => $newSlug,
         'content' => $this->input->post('content'),
         'headline' => $this->input->post('headline'),
         'draft' => $this->input->post('draft'),

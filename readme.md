@@ -21,7 +21,7 @@ FILSVOX merupakan aplikasi review film berbasis Web App yang dibuat dengan mengg
 
 - [x] Frontend ( Landing Page )
 - [x] Frontend ( Login Page )
-- [ ] Frontend ( Register Page )
+- [x] Frontend ( Register Page )
 - [x] Frontend ( Dashboard )
 - [x] Frontend ( Review Page )
 - [x] Frontend ( Profile Page )
@@ -30,12 +30,11 @@ FILSVOX merupakan aplikasi review film berbasis Web App yang dibuat dengan mengg
 
 - [x] Membuat Database
 - [x] Backend ( Login )
-- [ ] Backend ( Register )
+- [x] Backend ( Register )
 - [x] Backend ( Dashboard )
 - [x] Backend ( Review )
 - [x] Backend ( Profile )
 - [x] Backend ( Komentar )
-- [ ] Backend ( Rating )
 - [x] Backend ( Search )
 - [x] Backend ( Filter )
 - [x] Backend ( CRUD )
@@ -43,11 +42,11 @@ FILSVOX merupakan aplikasi review film berbasis Web App yang dibuat dengan mengg
 
 ### 🔍 Apa apakah yang baru?
 
-- Lihat perubahan [lebih lanjut.](../main/changelogs.md)
+- Lihat perubahan [lebih lanjut.](../development/changelogs.md)
 
 ### Informasi Akun
 
-- Administrator : admin - 12345678
+- Administrator : admin - admin
 
 ### 📝 Persyaratan Penggunaan
 

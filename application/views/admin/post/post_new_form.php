@@ -61,6 +61,13 @@
                     </div>
                   </div>
 
+                  <div class="mb-4">
+                    <label class="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2" for="contributor">
+                      Kontributor
+                    </label>
+                    <input class="bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 block w-full rounded disable" type="text" name="contributor" value="<?php echo $current_user->name; ?>" readonly>
+                  </div>
+
                   <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full px-3">
                       <label class="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2" for="grid-cover">
@@ -115,7 +122,7 @@
                         Headline
                       </label>
                       <div class="relative">
-                        <select disabled name="headline" class="disable block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 rounded" id="grid-headline">
+                        <select name="headline" class="disable block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 rounded" id="grid-headline">
                           <option value="false">False</option>
                           <option value="true">True</option>
                         </select>

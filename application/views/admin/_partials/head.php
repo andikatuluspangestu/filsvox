@@ -17,9 +17,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- All Vendor CSS -->
-  <link href="sweetalert2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5.0.14/dark.min.css">
   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-  <link href="https://cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,5 +27,13 @@
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3163/3163508.png" type="image/x-icon" />
+
+  <!-- Force Darkmode -->
+  <meta name="color-scheme" content="dark">
+
+  <!-- Mulai lakukan session data user  -->
+  <?php
+    $user = $this->session->userdata('user');
+  ?>
 
 </head>

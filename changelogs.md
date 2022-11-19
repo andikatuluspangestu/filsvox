@@ -1,9 +1,96 @@
 ### **Changelogs**
 All notable changes to this project will be documented in this file.
 
-> [ v3.0.0 ] Unreleased - TBD :
+> [ v4.0.0 ] ```Stable``` Released - 19/11/2022 :
+- Added : Now contributors can only view their own movie review articles
+- Added : Admins can now see the number of articles made by each contributor
+- Added : Contributors can now see their own review article statistics chart
+- Added : Now contributors can see the number of published review articles, and their own drafts
+- Added : Star rating has been added in the mobile view
+- Added : Now if user clicks on upcoming movie it will show alert message
+- Added : Now users can view all film review articles on the explore menu
+- Fixed : The background color on the add contributor form has been fixed
+- Fixed : The layout margins on the review article reading page are inconsistent
+- Fixed : Disqus Form is not responsive
+- Fixed : Now you can click on popular movie titles to see reviews
+- Fixed : mixing of secure and insecure content on a web page
+- Fixed : List user table content is not responsive
+- Fixed : Search by category does not return what is expected when results are not available
+- Fixed : List of popular and upcoming movies on search result page
+- Fixed : Category padding on mobile view
+- Fixed : Fix PWA not running properly
+- Fixed : Major bugs
+
+> [ v3.0.2 ] Released - 14/11/2022 :
+- Added : Now you can see a list of upcoming movie reviews on the Web
+- Added : Support Progresive Web App (PWA) for Android and iOS
+- Change : On the read review page on mobile, the card cover is replaced with a trailer card
+- Fixed : Rating badge and number of views do not appear in the list of all films
+- Fixed : Trailer not showing on mobile article page
+- Fixed : The menu button to make it clearer to see
+- Fixed : List of popular and upcoming movies on review reading page
+- Fixed : Back button blocking content on mobile
+- Fixed : The issue of the article and category list table not appearing, has been fixed
+- Fixed : Issues with the appearance of articles and categories that are not neat on the admin page
+
+> [ v3.0.1 ] Released - 13/11/2022 :
+- Added  : You now have the option to view the latest movie reviews for the past week
+- Added  : Now you can see the most popular movie reviews on the explore page
+- Added  : You can see video trailers in each movie article, by pressing the "Watch Trailer" button
+- Added  : Contributors can now add video trailers from youtube
+- Added  : Now you can see the films that will be reviewed in the future ( Mobile )
+- Added  : The page not found design has been updated
+- Change : The Headlines feature may have been enabled for some contributors
+- Change : Complete overhaul of UIUX in explore page to improve user experience
+- Change : Changed the bottom navbar design style, floating to fixed bottom
+- Change : Badge button on the main mobile-view has been removed due to an issue that can't be fixed now
+- Change : The "Upcoming" menu has been removed for the time being, as the feature is currently under development
+- Fixed : Fixed unreleased reviews appearing on search pages
+- Fixed : Headline does not appear on the main page of the website has been fixed
+- Fixed : Error when changing movie posting has been fixed
+- Fixed : Headline placement has been improved on mobile and desktop
+- Fixed : Modal popup from APIs information not showing has been fixed
+- Fixed : ``issue #1`` has been fixed
+- Fixed : ``issue #2`` has been fixed
+- Fixed : ``Issue #3`` has been fixed
+- Fixed : ``Issue #4`` has been fixed
+
+---
+
+- ``Issue #1`` : The search form card in the mobile-view displays a light theme, when the device system uses a light color scheme
+- ``Issue #2`` : For trailers only supports direct video links, does not support videos from youtube (due to copyright issues)
+- ``Issue #3`` : The search keyword for the title of the film must be case sensitive
+- ``Issue #4`` : Popular and favorite movie section still not showing correct information
+- ``Issue #5`` : The genre badge button on the main mobile-view page is not working
+
+> [ v3.0.0 ] Released - 11/11/2022 :
 - Added : User Register or Sign Up
 - Added : User Management
+- Added : Introduction Web API for Developers
+- Added : Now the mobile version of filsvox is available, still web-based in BETA stage
+- Added : Now if you use a smartphone, you will be directed to the mobile-view web page
+- Added : Now you can search film by title, artist, genre, and writers ( BETA )
+- Added : Search by category in mobile view has worked well
+- Added : Now every movie has a star rating ( BETA )
+- Added : You can now see the number of visitors in each movie review ( BETA )
+- Added : Improved search results page in mobile view to make it more concise
+- Added : Now you can edit user profile
+- Added : More role has been added
+- Change : Introduce new favicon
+- Change : Improve context menu container UI
+- Change : Improve count card UI in Dashboard
+- Change : Improve Login and Register UI
+- Change : Improve Add Category UI Form
+- Change : Full Re-design UI for Login Page
+- Change : More categories has been deleted
+- Change : Only admins can delete categories
+- Fixed  : Only admins can change contributor roles
+- Fixed  : Contributors shouldn't be able to access the contributor management page
+- Fixed  : Fixed an error adding new contributors
+- Fixed  : Edit password on user profile has been fixed
+- Fixed  : Current user not detected in sidebar has been fixed
+- Fixed  : Minor bug fixes
+- Issue  : #1 - Edit user profile avatar and password ( Closed )
 
 > [ v2.0.0 ] Released - 05/11/2022 :
 - Added : Now you can search or view list film by category

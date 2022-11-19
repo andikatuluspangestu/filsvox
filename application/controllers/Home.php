@@ -19,6 +19,15 @@ class Home extends CI_Controller
 		// ambil artikel yang statusnya bukan draft dengan LIMIT 6
 		$data['articles'] = $this->article_model->get_published(6, 0);
 
+		// ambil artikel yang status headline = true
+		$data['headline'] = $this->article_model->get_headline();
+
+		// ambil artikel yang memiliki visitor terbanyak
+		$data['popular'] = $this->article_model->get_most_viewed();
+
+		// ambil artikel yang memiliki status draft = true
+		$data['draft'] = $this->article_model->get_draft();
+
 		if (count($data['articles']) > 0) {
 			// kirim data artikel ke view
 			$this->load->view('partials/header');
@@ -34,6 +43,28 @@ class Home extends CI_Controller
 		}
 	}
 
-	// Buat function pencarian
+	public function mobile()
+	{
 
+		// ambil kategori artikel berdasarkan artikel
+		$data['categories'] = $this->article_model->get_kategori();
+
+		// ambil artikel yang statusnya bukan draft dengan LIMIT 6
+		$data['articles'] = $this->article_model->get_published(6, 0);
+
+		// ambil artikel yang status headline = true
+		$data['headline'] = $this->article_model->get_headline();
+
+		// ambil artikel yang memiliki status draft = true
+		$data['draft'] = $this->article_model->get_draft();
+
+		if (count($data['articles']) > 0) {
+			// kirim data artikel ke view
+			// $this->load->view('partials/header');
+			// $this->load->view('partials/navbar');
+			$this->load->view('mobile/index', $data);
+			$this->load->view('partials/headline', $data);
+			// $this->load->view('partials/footer');
+		}
+	}
 }

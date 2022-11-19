@@ -44,6 +44,22 @@ class Auth_model extends CI_Model
     return $this->session->has_userdata(self::SESSION_KEY);
   }
 
+  // function insert data user
+  public function insert_data($data)
+  {
+    $this->db->insert($this->_table, $data);
+  }
+
+  // Function untuk mengambil get_last_id
+  public function get_last_id()
+  {
+    $this->db->select('id');
+    $this->db->from($this->_table);
+    $this->db->order_by('id', 'DESC');
+    $this->db->limit(1);
+    return $this->db->get()->row()->id;
+  }
+
   public function current_user()
   {
     if (!$this->session->has_userdata(self::SESSION_KEY)) {

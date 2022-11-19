@@ -50,11 +50,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'home';
-$route['404_override'] = '';
+$route['404_override'] = 'notfound';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['admin'] = 'admin/dashboard';
 $route['article/(:any)'] = 'article/show/$1';
+$route['article/read'] = 'article/read/$1';
 
 // Create Router for All Article
 $route['article'] = 'article';
+
+$route['mobile'] = '/home/mobile';

@@ -12,6 +12,12 @@ class Article_model extends CI_Model
     return $query->result();
   }
 
+  // Tampilkan jumlah artikel dalam setiap user
+  public function get_article_count($data)
+  {
+    return $this->db->get_where('article', ['contributor' => $data])->num_rows();
+  }
+
   // Cek status Draft
   public function get_published($limit = null, $offset = null)
   {
@@ -25,14 +31,14 @@ class Article_model extends CI_Model
     return $query->result();
   }
 
-  // Buat Function untuk menampilkan semua kategori di tabel Category
+  // Function untuk menampilkan semua kategori di tabel Category
   public function get_kategori()
   {
     $query = $this->db->get('category');
     return $query->result();
   }
 
-  // Buat Function untuk mencari artikel berdasarkan slug
+  // Function untuk mencari artikel berdasarkan slug
   public function find_by_slug($slug)
   {
     if (!$slug) {
@@ -42,7 +48,7 @@ class Article_model extends CI_Model
     return $query->row();
   }
 
-  // Buat Function untuk mencari artikel berdasarkan id
+  // Function untuk mencari artikel berdasarkan id
   public function find($id)
   {
     if (!$id) {
@@ -85,6 +91,22 @@ class Article_model extends CI_Model
     return $this->db->count_all($this->_table);
   }
 
+  // Hitung jumlah artikel yang status draft false di tabel article dengan kondisi contributor = $data
+  public function count_published_user($data)
+  {
+    $this->db->where('contributor', $data);
+    $this->db->where('draft', 'FALSE');
+    return $this->db->count_all_results($this->_table);
+  }
+
+  // Hitung jumlah artikel yang status draft true di tabel article dengan kondisi contributor = $data
+  public function count_draft_user($data)
+  {
+    $this->db->where('contributor', $data);
+    $this->db->where('draft', 'TRUE');
+    return $this->db->count_all_results($this->_table);
+  }
+
   // Hitung jumlah artikel dengan status Draft
   public function count_draft()
   {
@@ -92,9 +114,21 @@ class Article_model extends CI_Model
   }
 
   // Hitung jumlah kategori di tabel kategori
-  public function count_kategori()
+  public function count_category()
   {
     return $this->db->count_all('category');
+  }
+
+  // Function untuk mengupdate jumlah visitor
+  function update_counter($slug)
+  {
+    $this->db->where('slug', urldecode($slug));
+    $this->db->select('visitor');
+    $count = $this->db->get('article')->row();
+
+    $this->db->where('slug', urldecode($slug));
+    $this->db->set('visitor', ($count->visitor + 1));
+    $this->db->update('article');
   }
 
   // Menampilkan Data dengan REST API
@@ -106,16 +140,78 @@ class Article_model extends CI_Model
     return $this->db->get();
   }
 
-  // Pencarian Data
+  // Pencarian Data yang memiliki keyword
   public function search($keyword)
+  {
+    $this->db->select("*");
+    $this->db->from("article");
+    $this->db->like('slug', $keyword);
+    return $this->db->get()->result();
+  }
+
+  // Pencarian Film berdasarkan judul, directors, writers, actors
+  public function search_film($keyword)
   {
     if (!$keyword) {
       return null;
     }
     $this->db->like('title', $keyword);
-    $this->db->or_like('content', $keyword);
+    $this->db->or_like('directors', $keyword);
+    $this->db->or_like('writers', $keyword);
+    $this->db->or_like('actors', $keyword);
+    $query = $this->db->get('film');
+    return $query->result();
+  }
+
+  // Cari artikel yang memiliki visitor lebih dari 100
+  public function get_popular()
+  {
+    $this->db->where('visitor >', 50);
     $query = $this->db->get($this->_table);
     return $query->result();
+  }
+
+  // Cari artikel terbaru dalam seminggu terakhir
+  public function get_latest()
+  {
+    $this->db->where('created_at >', date('Y-m-d', strtotime('-7 days')));
+    $query = $this->db->get($this->_table);
+    return $query->result();
+  }
+
+  // Cari artikel yang memiliki headline = TRUE
+  public function get_headline()
+  {
+    $this->db->where('headline', 'true');
+    $query = $this->db->get($this->_table);
+    return $query->result();
+  }
+
+  // Cari artikel yang memiliki draft = TRUE
+  public function get_draft()
+  {
+    $this->db->where('draft', 'true');
+    $this->db->limit(3);
+    $query = $this->db->get($this->_table);
+    return $query->result();
+  }
+
+  // Tampilkan artikel yang memiliki visitor terbanyak limit 3
+  public function get_most_viewed()
+  {
+    $this->db->order_by('visitor', 'DESC');
+    $this->db->limit(3);
+    $query = $this->db->get($this->_table);
+    return $query->result();
+  }
+
+  // Cek $slug artikel yang memiliki draft = TRUE
+  public function get_draft_by_slug($slug)
+  {
+    $this->db->where('slug', $slug);
+    $this->db->where('draft', 'true');
+    $query = $this->db->get($this->_table);
+    return $query->row();
   }
 
   // Pencarian Film berdasarkan Kategori

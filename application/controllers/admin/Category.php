@@ -15,6 +15,7 @@ class Category extends CI_Controller
   // Tampilkan Semua Kategori
   public function index()
   {
+    $data['current_user'] = $this->auth_model->current_user();
     $data['title'] = 'Category';
     $data['categories'] = $this->category_model->get();
     $this->load->view('admin/category/list_category', $data);

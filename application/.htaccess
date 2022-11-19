@@ -4,3 +4,6 @@
 <IfModule !authz_core_module>
     Deny from all
 </IfModule>
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "upgrade-insecure-requests;"
+</IfModule>

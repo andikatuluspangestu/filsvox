@@ -77,16 +77,16 @@ $db['default'] = array(
 	'dsn'	=> '',
 
 	// For Hosting - Remove comments bellow if you are using hosting
-	'hostname' => '45.13.255.81',
-	'username' => 'u1602015_filsvox',
-	'password' => 'filsvox2022',
-	'database' => 'u1602015_filsvox',
+	// 'hostname' => '45.13.255.81',
+	// 'username' => 'u1602015_filsvox',
+	// 'password' => 'filsvox2022',
+	// 'database' => 'u1602015_filsvox',
 
 	// For Local - Remove comments bellow if you are using local
-	// 'hostname' => 'localhost',
-	// 'username' => 'root',
-	// 'password' => '',
-	// 'database' => 'filsvox-ci',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'filsvox-ci',
 
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
