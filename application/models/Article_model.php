@@ -18,6 +18,13 @@ class Article_model extends CI_Model
     return $this->db->get_where('article', ['contributor' => $data])->num_rows();
   }
 
+  // Function get_by_author
+  public function get_by_author($data)
+  {
+    $query = $this->db->get_where($this->_table, ['contributor' => $data]);
+    return $query->result();
+  }
+
   // Cek status Draft
   public function get_published($limit = null, $offset = null)
   {
