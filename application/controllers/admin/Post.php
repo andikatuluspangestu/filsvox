@@ -28,8 +28,6 @@ class Post extends CI_Controller
     $this->load->view('admin/post/post_list.php', $data);
   }
 
-
-
   // Tambah Artikel
   public function new()
   {
