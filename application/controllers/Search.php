@@ -109,8 +109,9 @@ class Search extends CI_Controller
       $this->load->view('mobile/article/search', $data);
       $this->load->view('mobile/partials/footer');
     } else {
-      // Redirect
-      redirect('mobile/');
+      $this->load->view('mobile/partials/header');
+      $this->load->view('mobile/article/notfound');
+      $this->load->view('mobile/partials/footer');
     }
   }
 

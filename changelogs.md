@@ -1,7 +1,19 @@
 ### **Changelogs**
 All notable changes to this project will be documented in this file.
 
-> [ v4.0.0 ] `Stable` Released - 19/11/2022 :
+> [ v4.0.2 ] Released - 24/11/2022 :
+- Added : the option of viewing all movies on the home page on the mobile view
+- Change : Move search from movie to explorer page
+- Change : Improved headlines on web and mobile pages
+- Change : The ratings on the upcoming film have been removed, and the label "Coming Soon" has been changed.
+- Fixed : The list of contributors' articles not showing has been completely fixed
+- Fixed : The button to view reviews in the headline on the mobile page has been fixed
+- Fixed : Fixed automatic redirect to main page when not finding movies in category on mobile page
+- Fixed : Fixed an error displaying the number of reviews in the headline
+- Fixed : Improved user experience on sidebars and more
+
+> [ v4.0.0 ] Released - 19/11/2022 :
+- ```Initial Stable Released```
 - Added : Now contributors can only view their own movie review articles
 - Added : Admins can now see the number of articles made by each contributor
 - Added : Contributors can now see their own review article statistics chart
@@ -21,6 +33,7 @@ All notable changes to this project will be documented in this file.
 - Fixed : Category padding on mobile view
 - Fixed : Title color on explore menu in mobile view
 - Fixed : Fix PWA not running properly
+- Fixed : Article not showing after login with contributor account
 - Fixed : Major bugs
 
 > [ v3.0.2 ] Released - 14/11/2022 :

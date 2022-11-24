@@ -14,7 +14,7 @@
             <div class="flex flex-col space-y-1">
               <span class="text-gray-400 dark:text-white font-semibold">
                 <!-- Limit alphabet 15 -->
-                <a href="<?= site_url('article/visitor/' . $pop->slug) ?>"><?= substr($pop->title, 0, 15) . ".."; ?></a>
+                <a class="hover:text-red-500" href="<?= site_url('article/visitor/' . $pop->slug) ?>"><?= substr($pop->title, 0, 15) . ".."; ?></a>
               </span>
               <?php foreach ($categories as $category) : ?>
                 <?php if ($category->id == $pop->kategori) : ?>
@@ -48,7 +48,7 @@
           <img src="<?= $draft->cover; ?>" class="object-cover w-1/3 h-14 rounded-md" alt="<?= $draft->title; ?>">
           <div class="flex flex-col justify-between  ">
             <div class="flex flex-col space-y-1">
-              <span class="text-gray-400 dark:text-white font-semibold">
+              <span class="text-white font-semibold">
                 <?= $draft->title; ?>
               </span>
               <?php foreach ($categories as $category) : ?>
