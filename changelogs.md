@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file.
 - Fixed : The button to view reviews in the headline on the mobile page has been fixed
 - Fixed : Fixed automatic redirect to main page when not finding movies in category on mobile page
 - Fixed : Fixed an error displaying the number of reviews in the headline
-- FIxed : Improved user experience on sidebars and more
+- Fixed : Improved user experience on sidebars and more
 
 > [ v4.0.0 ] Released - 19/11/2022 :
 - ```Initial Stable Released```
