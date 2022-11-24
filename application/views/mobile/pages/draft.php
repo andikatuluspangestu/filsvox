@@ -25,49 +25,8 @@
             <img src="<?= $article->cover; ?>" class="w-12 h-12 rounded-md" alt="Cover" />
             <div class="ml-3">
               <h3 class="font-semibold text-gray-100"><?= $article->title; ?></h3>
-              <div class="flex items-center mt-1">
-                <?php if ($article->visitor <= 20) : ?>
-                  <!-- Loop -->
-                  <?php for ($i = 0; $i < 1; $i++) : ?>
-                    <!-- Load view bintang -->
-                    <?php
-                    $this->load->view('bintang.php');
-                    ?>
-                  <?php endfor; ?>
-
-                <?php elseif ($article->visitor <= 40) : ?>
-                  <!-- Loop -->
-                  <?php for ($i = 0; $i < 2; $i++) : ?>
-                    <!-- Load view bintang -->
-                    <?php
-                    $this->load->view('bintang.php');
-                    ?>
-                  <?php endfor; ?>
-                <?php elseif ($article->visitor <= 60) : ?>
-                  <!-- Loop -->
-                  <?php for ($i = 0; $i < 3; $i++) : ?>
-                    <!-- Load view bintang -->
-                    <?php
-                    $this->load->view('bintang.php');
-                    ?>
-                  <?php endfor; ?>
-                <?php elseif ($article->visitor <= 80) : ?>
-                  <!-- Loop -->
-                  <?php for ($i = 0; $i < 4; $i++) : ?>
-                    <!-- Load view bintang -->
-                    <?php
-                    $this->load->view('bintang.php');
-                    ?>
-                  <?php endfor; ?>
-                <?php elseif ($article->visitor <= 500) : ?>
-                  <!-- Loop -->
-                  <?php for ($i = 0; $i < 5; $i++) : ?>
-                    <!-- Load view bintang -->
-                    <?php
-                    $this->load->view('bintang.php');
-                    ?>
-                  <?php endfor; ?>
-                <?php endif; ?>
+              <div class="flex items-center">
+                <span class="text-red-500 italic">Segera Hadir</span>
               </div>
             </div>
           </li>
@@ -82,5 +41,4 @@
   document.getElementById('getsoon').onclick = function() {
     alert('Film ini akan datang, silahkan tunggu!');
   }
-
 </script>

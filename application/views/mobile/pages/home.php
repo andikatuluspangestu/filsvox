@@ -6,7 +6,7 @@
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
       <?php foreach ($articles as $article) : ?>
         <!-- load view -->
-        <?php $this->load->view('partials/headline', ['article' => $article, 'categories' => $categories]); ?>
+        <?php $this->load->view('/mobile/partials/headline', ['article' => $article, 'categories' => $categories]); ?>
       <?php endforeach; ?>
     </div>
 
@@ -30,42 +30,15 @@
 
   </div>
 
-  <!-- Search -->
-  <form class="flex items-center mb-3" action="<?= base_url('/search/find') ?>" method="get">
-    <label for="voice-search" class="sr-only"></label>
-    <div class="relative w-full">
-      <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
-        </svg>
-      </div>
-      <input type="text" id="voice-search" name="keyword" class="text-sm rounded-lg block w-full pl-10 p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-red-500 focus:border-red-500" placeholder="Search Films..." required="">
-
+  <div class="flex items-center justify-between mb-3">
+    <span class="font-semibold text-white">Recommended</span>
+    <div class="flex items-center space-x-2 fill-gray-500">
+      <a href="<?= base_url('/search/allmovies') ?>"><span class="text-white hover:text-red-600 bg-red-800 px-2 rounded-2xl">See All</span></a>
+      <!-- <svg class="h-7 w-7 hover:border-red-600 hover:fill-red-600 dark:fill-white dark:hover:fill-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M10.7 17.707l5.7-5.71 -5.71-5.707L9.27 7.7l4.29 4.293 -4.3 4.29Z"></path>
+      </svg> -->
     </div>
-    <button type="submit" class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-red-700 rounded-lg border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
-      <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-      </svg>
-    </button>
-  </form>
-
-  <!-- Badge Kategori -->
-
-  <!-- <span class="text-sm font-medium mr-2 px-2.5 py-0.5 mb-5 rounded-2xl bg-red-700 text-gray-300">
-    All Genre
-  </span>
-
-  <span class="text-sm font-medium mr-2 px-2.5 py-0.5 mb-5 rounded-2xl bg-gray-700 text-gray-100">
-    Horror
-  </span>
-
-  <span class="text-sm font-medium mr-2 px-2.5 py-0.5 mb-5 rounded-2xl bg-gray-700 text-gray-300">
-    Drama
-  </span>
-
-  <span class="text-sm font-medium mr-2 px-2.5 py-0.5 mb-5 rounded-2xl bg-gray-700 text-gray-300">
-    Action
-  </span> -->
+  </div>
 
   <div class="flex flex-col mt-2">
     <?php foreach ($articles as $article) : ?>
@@ -87,7 +60,7 @@
                 <?php endif; ?>
               <?php endforeach; ?>
 
-              <h2 class="flex-auto text-lg font-medium text-white"><?= $article->title; ?></h2>
+              <h2 class="flex-auto text-lg font-medium text-white"><?= $article->title; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
 
               <div class="flex items-center mt-2.5 mb-5">
 

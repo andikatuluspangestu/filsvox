@@ -56,7 +56,6 @@
 
 	<style>
 		/* Sembunyikan btn-toggle di layar laptop */
-
 		@media (min-width: 1024px) {
 			#btn-toggle {
 				display: none;

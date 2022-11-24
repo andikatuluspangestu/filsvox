@@ -28,7 +28,7 @@
         <?php endforeach; ?>
 
         <div class="mt-4 flex space-x-3 items-center">
-          <a href="<?= site_url('article/' . $article->slug) ?>" class="px-5 py-2.5 bg-red-600 hover:bg-red-700 rounded-lg text-xs inline-block dark:bg-slate-900 hover:dark:bg-slate-800">Lihat Review</a>
+          <a href="<?= site_url('article/mobilevisitor' . $article->slug) ?>" class="px-5 py-2.5 bg-red-600 hover:bg-red-700 rounded-lg text-xs inline-block dark:bg-slate-900 hover:dark:bg-slate-800">Lihat Review</a>
         </div>
       </div>
     </div>
