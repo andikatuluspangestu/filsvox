@@ -29,7 +29,9 @@ All notable changes to this project will be documented in this file.
 - Fixed : List user table content is not responsive
 - Fixed : Search by category does not return what is expected when results are not available
 - Fixed : List of popular and upcoming movies on search result page
+- Fixed : The card on the movie page will display a light color scheme in dark mode
 - Fixed : Category padding on mobile view
+- Fixed : Title color on explore menu in mobile view
 - Fixed : Fix PWA not running properly
 - Fixed : Article not showing after login with contributor account
 - Fixed : Major bugs
