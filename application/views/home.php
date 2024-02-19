@@ -109,9 +109,9 @@
                             <div class="my-1 w-50 md:w-1/2 lg:my-2 lg:px-5 lg:w-1/3">
 
                                 <!-- Items Film -->
-                                <div class="w-full max-w-sm rounded-lg shadow-md bg-slate-800 dark:border-gray-700 flex flex-col h-full justify-between">
+                                <div class="w-full max-w-sm rounded-lg shadow-md bg-slate-800 dark:border-gray-700">
                                     <a href="#">
-                                        <img class="object-cover h-48 w-full rounded-t-lg border-b-2 border-b-white-600" src="<?= $article->cover; ?>" alt="<?= $article->title; ?>">
+                                        <img class="object-cover h-48 w-96 rounded-t-lg justify-between border-b-2 border-b-white-600" src="<?= $article->cover; ?>" alt="<?= $article->title; ?>">
                                     </a>
 
                                     <div class="px-5 pb-5">
@@ -119,23 +119,62 @@
                                             <h2 class="pt-5 font-semibold tracking-tight text-white dark:text-white"><?= $article->title; ?></h2>
                                         </a>
                                         <div class="flex items-center mt-2.5 mb-5">
-                                            <?php
-                                            $starCount = min(intdiv($article->visitor, 20), 5);
-                                            for ($i = 0; $i < $starCount; $i++) {
-                                                $this->load->view('bintang.php');
-                                            }
-                                            ?>
+
+                                            <!-- Jika visitor lebih dari 5 tampilkan "Bad", dan jika visitor lebih dari 10 tampilkan "Not Bad", dan jika visitor lebih dari 20 tampilkan "Recommended" -->
+                                            <?php if ($article->visitor <= 20) : ?>
+                                                <!-- Loop -->
+                                                <?php for ($i = 0; $i < 1; $i++) : ?>
+                                                    <!-- Load view bintang -->
+                                                    <?php
+                                                    $this->load->view('bintang.php');
+                                                    ?>
+                                                <?php endfor; ?>
+
+                                            <?php elseif ($article->visitor <= 40) : ?>
+                                                <!-- Loop -->
+                                                <?php for ($i = 0; $i < 2; $i++) : ?>
+                                                    <!-- Load view bintang -->
+                                                    <?php
+                                                    $this->load->view('bintang.php');
+                                                    ?>
+                                                <?php endfor; ?>
+                                            <?php elseif ($article->visitor <= 60) : ?>
+                                                <!-- Loop -->
+                                                <?php for ($i = 0; $i < 3; $i++) : ?>
+                                                    <!-- Load view bintang -->
+                                                    <?php
+                                                    $this->load->view('bintang.php');
+                                                    ?>
+                                                <?php endfor; ?>
+                                            <?php elseif ($article->visitor <= 80) : ?>
+                                                <!-- Loop -->
+                                                <?php for ($i = 0; $i < 4; $i++) : ?>
+                                                    <!-- Load view bintang -->
+                                                    <?php
+                                                    $this->load->view('bintang.php');
+                                                    ?>
+                                                <?php endfor; ?>
+                                            <?php elseif ($article->visitor <= 500) : ?>
+                                                <!-- Loop -->
+                                                <?php for ($i = 0; $i < 5; $i++) : ?>
+                                                    <!-- Load view bintang -->
+                                                    <?php
+                                                    $this->load->view('bintang.php');
+                                                    ?>
+                                                <?php endfor; ?>
+                                            <?php endif; ?>
+
                                             <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
                                                 <?= $article->visitor; ?> Views
                                             </span>
                                         </div>
 
-                                        <div class="flex justify-between items-center">
+                                        <div class="flex justify-between items-center ">
+                                            <!-- Ketika tombol di klik maka akan bertambah satu angka pada database -->
                                             <a id="click" href="<?= site_url('article/visitor/' . $article->slug) ?>" class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-sm text-sm px-2 py-1 text-center">Review</a>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         <?php endforeach ?>
 
