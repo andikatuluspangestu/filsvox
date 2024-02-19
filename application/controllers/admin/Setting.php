@@ -23,7 +23,7 @@ class Setting extends CI_Controller
     $data['current_user'] = $this->auth_model->current_user();
 
     if ($this->input->method() === 'post') {
-      // the user id contain dot, so we must remove it
+      
       $file_name = str_replace('.', '', $data['current_user']->id);
       $config['upload_path']          = FCPATH . '/upload/avatar/';
       $config['allowed_types']        = 'gif|jpg|jpeg|png';

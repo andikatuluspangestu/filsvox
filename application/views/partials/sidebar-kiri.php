@@ -17,7 +17,9 @@
 
 			<ul tabindex="0" class="dropdown-content menu p-2 shadow bg-slate-800 w-52 rounded-lg">
 				<?php foreach ($categories as $category) : ?>
-					<li class="hover:text-white"><a href="<?= base_url('/search/kategori/') . $category->id; ?>" class="focus:text-white focus:bg-slate-800"><?= $category->name; ?></a></li>
+					<li class="hover:text-white">
+						<a href="<?= base_url('/search/kategori/') . $category->id; ?>" class="focus:text-white focus:bg-slate-800"><?= $category->name; ?></a>
+					</li>
 				<?php endforeach; ?>
 			</ul>
 

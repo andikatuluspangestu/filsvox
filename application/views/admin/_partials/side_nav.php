@@ -100,3 +100,19 @@
     </div>
   </div>
 </aside>
+
+<script>
+
+  // Jika link di klik maka tambahkan class active:bg-green-700
+
+  const links = document.querySelectorAll('.side-item');
+
+  links.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active:bg-green-700');
+    } else {
+      link.classList.remove('active:bg-green-700');
+    }
+  });
+
+</script>
