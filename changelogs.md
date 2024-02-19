@@ -1,6 +1,15 @@
 ### **Changelogs**
 All notable changes to this project will be documented in this file.
 
+> [ v4.0.3 ] Released - 19/02/2024 :
+- Added : Now you can see the number of reviews in the headline
+- Changes : Update to PHP 8.1 
+- Changes : Bump Alpine.js version to 3.13.5
+- Changes : Bump vendors version to latest version
+- Changes : Update to Latest version of Tailwind CSS
+- Changes : Update Rating Logic for better performance
+- Others : Minor bug fixes
+
 > [ v4.0.2 ] Released - 24/11/2022 :
 - Added : the option of viewing all movies on the home page on the mobile view
 - Change : Move search from movie to explorer page
