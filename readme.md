@@ -6,6 +6,7 @@ FILSVOX merupakan aplikasi review film berbasis Web App yang dibuat dengan mengg
 
 - First Beta Release : 25 Oktober 2022
 - First Public BETA Release : 29 Oktober 2022
+- First Stable Release : 19 November 2022
 
 ### 👨‍💻 Developer
 
@@ -42,7 +43,7 @@ FILSVOX merupakan aplikasi review film berbasis Web App yang dibuat dengan mengg
 
 ### 🔍 Apa apakah yang baru?
 
-- Lihat perubahan [lebih lanjut.](../development/changelogs.md)
+- Lihat perubahan [lebih lanjut.](../main/changelogs.md)
 
 ### Informasi Akun
 
