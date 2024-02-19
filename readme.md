@@ -9,12 +9,7 @@ FILSVOX merupakan aplikasi review film berbasis Web App yang dibuat dengan mengg
 - First Stable Release : 19 November 2022
 
 ### 👨‍💻 Developer
-
 - Andika Tulus Pangestu
-- Aminatun Khoiriyyah
-- Athariq Byan F.S
-- Syita Nutyunaizah
-- Widya Bella Putriana
 
 ### 🗒 ToDo List
 
